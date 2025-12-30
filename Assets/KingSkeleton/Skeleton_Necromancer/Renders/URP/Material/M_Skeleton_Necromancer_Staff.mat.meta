@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1f7c0008001e437c99ba3a48671c5533
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329066
+  packageName: Skeleton_Necromancer
+  packageVersion: 1.0
+  assetPath: Assets/Feyloom/Skeleton_Necromancer/Renders/URP/Material/M_Skeleton_Necromancer_Staff.mat
+  uploadId: 778980

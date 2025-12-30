@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ea0dfc6bc246404eb370d76c28f331ab
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329066
+  packageName: Skeleton_Necromancer
+  packageVersion: 1.0
+  assetPath: Assets/Feyloom/Resources/Built-in_Resources/Shader/Base Shader Built-in.shader
+  uploadId: 778980

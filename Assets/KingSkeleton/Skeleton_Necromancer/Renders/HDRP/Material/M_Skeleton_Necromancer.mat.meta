@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a70743fc0797498ba1f55a5909994b77
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329066
+  packageName: Skeleton_Necromancer
+  packageVersion: 1.0
+  assetPath: Assets/Feyloom/Skeleton_Necromancer/Renders/HDRP/Material/M_Skeleton_Necromancer.mat
+  uploadId: 778980

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 82ef5db76d1243f2816ca65b9566f3cd
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329066
+  packageName: Skeleton_Necromancer
+  packageVersion: 1.0
+  assetPath: Assets/Feyloom/Resources/HDRP_Resources/HDRPDefaultResources/Lighting
+    Settings.lighting
+  uploadId: 778980

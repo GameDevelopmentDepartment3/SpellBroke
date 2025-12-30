@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a553fee14b6e478e9513972548c83cda
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 329066
+  packageName: Skeleton_Necromancer
+  packageVersion: 1.0
+  assetPath: Assets/Feyloom/Resources/URP_Resources/URPDefaultResources/UniversalRenderPipelineAsset.asset
+  uploadId: 778980
