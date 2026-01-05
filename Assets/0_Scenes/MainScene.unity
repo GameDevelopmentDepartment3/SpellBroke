@@ -659,6 +659,71 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19787820}
   m_Mesh: {fileID: -1443631085275918351, guid: 38c4f9630acdffb48add94d41db231b2, type: 3}
+--- !u!1 &36084388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36084389}
+  - component: {fileID: 36084391}
+  - component: {fileID: 36084390}
+  m_Layer: 0
+  m_Name: OrbitalManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36084389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36084388}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 525.93884, y: 4.5757704, z: 491.2957}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &36084390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36084388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa109458c723847ecb094145162324d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrbitalTest
+--- !u!114 &36084391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36084388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e574c8808cd497490af0531ff1c043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrbitalManager
+  playerTransform: {fileID: 396432979}
+  radius: 7
+  rotationSpeed: 100
+  followSmoothTime: 0.05
+  crystalPrefabs:
+  - {fileID: 683182934616091483, guid: 491bd2f8e55e1db45a195465b18740bd, type: 3}
+  - {fileID: 3928998189374746443, guid: 00bba72dbda252a4eac12e218848cb44, type: 3}
+  - {fileID: 6414953239637031926, guid: 8c49b35febea4514b87b37f643064ed4, type: 3}
 --- !u!1 &37321947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,9 +4078,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   playerTarget: {fileID: 327529575}
-  mouseSensitivity: 1.5
-  distanceFromPlayer: 25
+  mouseSensitivity: 1
+  distanceFromPlayer: 30
+  minDistance: 1
   smoothTime: 0.02
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  cameraRadius: 0.2
 --- !u!1 &333509432
 GameObject:
   m_ObjectHideFlags: 0
@@ -5096,6 +5166,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390568711}
   m_Mesh: {fileID: -1443631085275918351, guid: 38c4f9630acdffb48add94d41db231b2, type: 3}
+--- !u!1 &396432978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396432979}
+  m_Layer: 0
+  m_Name: OrbitalTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396432979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396432978}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.13949464, y: 1.1007212, z: 0.19529831}
+  m_LocalScale: {x: 0.19053608, y: 0.19053608, z: 0.19053608}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634810358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &403684473
 GameObject:
   m_ObjectHideFlags: 0
@@ -9277,7 +9378,7 @@ GameObject:
   - component: {fileID: 676895930}
   - component: {fileID: 676895929}
   - component: {fileID: 676895928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14293,6 +14394,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: 0
       addedObject: {fileID: 327529575}
+    - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 396432979}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
@@ -22261,7 +22365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846314689}
   - component: {fileID: 1846314690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: asdf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25534,7 +25638,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc821a9811384580a5ab6bda04c544d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 25
+  moveSpeed: 35
+  rotationSpeed: 10
+  jumpHeight: 8
+  gravity: -60
   cameraTransform: {fileID: 330585546}
 --- !u!143 &2141798291
 CharacterController:
@@ -25554,13 +25661,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.6
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &2147253959
 GameObject:
   m_ObjectHideFlags: 0
@@ -25667,3 +25774,4 @@ SceneRoots:
   - {fileID: 1325753568}
   - {fileID: 1131110109}
   - {fileID: 330585546}
+  - {fileID: 36084389}
