@@ -118,6 +118,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AddOrbital"",
+                    ""type"": ""Button"",
+                    ""id"": ""ffd62eb4-5505-40b7-848e-04e96830e3da"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RemoveOrbital"",
+                    ""type"": ""Button"",
+                    ""id"": ""7a178d89-d0cc-4032-bf8f-71d81040be50"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -197,6 +215,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""16ba84c2-896c-47ea-8c4f-6cc5ac25836b"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AddOrbital"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""48167e6c-c09e-4080-8b66-562c647952bf"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RemoveOrbital"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -208,6 +248,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_AddOrbital = m_Player.FindAction("AddOrbital", throwIfNotFound: true);
+        m_Player_RemoveOrbital = m_Player.FindAction("RemoveOrbital", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -291,6 +333,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_AddOrbital;
+    private readonly InputAction m_Player_RemoveOrbital;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -314,6 +358,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/AddOrbital".
+        /// </summary>
+        public InputAction @AddOrbital => m_Wrapper.m_Player_AddOrbital;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/RemoveOrbital".
+        /// </summary>
+        public InputAction @RemoveOrbital => m_Wrapper.m_Player_RemoveOrbital;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -349,6 +401,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @AddOrbital.started += instance.OnAddOrbital;
+            @AddOrbital.performed += instance.OnAddOrbital;
+            @AddOrbital.canceled += instance.OnAddOrbital;
+            @RemoveOrbital.started += instance.OnRemoveOrbital;
+            @RemoveOrbital.performed += instance.OnRemoveOrbital;
+            @RemoveOrbital.canceled += instance.OnRemoveOrbital;
         }
 
         /// <summary>
@@ -369,6 +427,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @AddOrbital.started -= instance.OnAddOrbital;
+            @AddOrbital.performed -= instance.OnAddOrbital;
+            @AddOrbital.canceled -= instance.OnAddOrbital;
+            @RemoveOrbital.started -= instance.OnRemoveOrbital;
+            @RemoveOrbital.performed -= instance.OnRemoveOrbital;
+            @RemoveOrbital.canceled -= instance.OnRemoveOrbital;
         }
 
         /// <summary>
@@ -430,5 +494,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "AddOrbital" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAddOrbital(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RemoveOrbital" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRemoveOrbital(InputAction.CallbackContext context);
     }
 }
