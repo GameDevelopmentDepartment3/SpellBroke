@@ -75,7 +75,6 @@ public class SummonManager : MonoBehaviour
         if (!instance)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
             InitializeObject(3);
         }
         else
