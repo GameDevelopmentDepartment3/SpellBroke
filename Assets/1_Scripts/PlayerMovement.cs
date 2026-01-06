@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 35f;
     public float rotationSpeed = 10f;
     
     [Header("Jump Settings")]
-    public float jumpHeight = 1.5f;   // 점프 높이
-    public float gravity = -15f;      // 중력 세기 (기본값보다 조금 강하게 설정하면 묵직함)
+    public float jumpHeight = 8f;   // 점프 높이
+    public float gravity = -60f;      // 중력 세기 (기본값보다 조금 강하게 설정하면 묵직함)
     
     [Header("References")]
     public Transform cameraTransform;
@@ -37,9 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (_anim.GetBool("isRun"))
+            _anim.SetBool("isIdle", false);
+        else 
+            _anim.SetBool("isIdle", true);
+        //if(_isGrounded)
+        //    _anim.SetBool("isJump", false);
         // 1. 땅 체크
         _isGrounded = _controller.isGrounded;
-        if (_isGrounded && _velocity.y < 0)
+        
+        if (_isGrounded && _velocity.y <= 0)
         {
             _anim.SetBool("isJump", false);
             _velocity.y = -2f; // 땅에 붙어있도록 작은 힘 유지
@@ -69,20 +76,18 @@ public class PlayerMovement : MonoBehaviour
         {
             _anim.SetBool("isRun", false);
         }
-
             // 3. 중력 적용
             _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+            _controller.Move(_velocity * Time.deltaTime);
     }
 
     // 점프 함수
     private void OnJump()
     {
-        if (_isGrounded)
-        {
-            // 물리 공식: v = sqrt(h * -2 * g)
-            //_anim.SetBool("isJump", true);
-            _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        if (!_isGrounded)
+            return;
+        // 물리 공식: v = sqrt(h * -2 * g)
+        _anim.SetBool("isJump", true);
+        _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 }
