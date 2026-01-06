@@ -1520,7 +1520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846314689}
   - component: {fileID: 1846314690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: How to move the Mob!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 2132134067}
   - component: {fileID: 2132134066}
   - component: {fileID: 2132134065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
