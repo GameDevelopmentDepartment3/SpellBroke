@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
             // 3. 중력 적용
             _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+            _controller.Move(_velocity * Time.deltaTime);
     }
 
     // 점프 함수
