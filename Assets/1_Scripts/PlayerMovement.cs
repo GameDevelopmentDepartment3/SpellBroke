@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 35f;
     public float rotationSpeed = 10f;
     
     [Header("Jump Settings")]
-    public float jumpHeight = 1.5f;   // 점프 높이
-    public float gravity = -15f;      // 중력 세기 (기본값보다 조금 강하게 설정하면 묵직함)
+    public float jumpHeight = 8f;   // 점프 높이
+    public float gravity = -60f;      // 중력 세기 (기본값보다 조금 강하게 설정하면 묵직함)
     
     [Header("References")]
     public Transform cameraTransform;

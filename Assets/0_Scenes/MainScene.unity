@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitalManager
   playerTransform: {fileID: 396432979}
-  baseRadius: 1.5
-  radiusPerObject: 0.5
-  maxRadius: 6
+  baseRadius: 6
+  radiusPerObject: 0.3
+  maxRadius: 7
   baseSpeed: 200
   speedDecreasePerObject: 20
   minSpeed: 50
