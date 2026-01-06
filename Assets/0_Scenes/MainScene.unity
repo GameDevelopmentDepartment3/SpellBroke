@@ -249,6 +249,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 1680393078699159452, guid: ffade76950c57e84ea92a71d5758d016, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 7492895667161425357, guid: ffade76950c57e84ea92a71d5758d016, type: 3}
       propertyPath: m_LocalScale.x
       value: 14.325045
@@ -376,6 +380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 1569095266634374864, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 7209914536683275755, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.4850006
@@ -798,6 +806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 1569095266634374864, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 7209914536683275755, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.4849997
@@ -903,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1052d554b023645ceb5957e4dc6d6841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterAi
+  stopDistance: 3
 --- !u!1 &684534773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1073,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2865309404087235004, guid: aecdca6e87dfbd74b895c081c9fe0fcc, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1324,6 +1341,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 2811193432394014214, guid: 87ddb3f120637d04ebed00deeb40e55a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 4903456007118200781, guid: 87ddb3f120637d04ebed00deeb40e55a, type: 3}
       propertyPath: m_Name
       value: rock_big_long (1)
@@ -1638,6 +1659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 373.206
       objectReference: {fileID: 0}
+    - target: {fileID: 4782608133381677792, guid: 591e653b5ab36a447a0189a05754a58a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1656,6 +1681,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 1569095266634374864, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 7209914536683275755, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.4850006
@@ -1783,6 +1812,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 1569095266634374864, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 7209914536683275755, guid: c1825ee87bae0d74db9d2419a3bee0af, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.4850006
@@ -1857,6 +1890,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684534774}
     m_Modifications:
+    - target: {fileID: 2811193432394014214, guid: 87ddb3f120637d04ebed00deeb40e55a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
     - target: {fileID: 4903456007118200781, guid: 87ddb3f120637d04ebed00deeb40e55a, type: 3}
       propertyPath: m_Name
       value: rock_big_long
@@ -1948,7 +1985,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132134064}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: becf2dde6381448ddbf2a8296729482a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2033,6 +2070,7 @@ MonoBehaviour:
   rotationSpeed: 10
   jumpHeight: 8
   gravity: -60
+  groundCheckDistance: 0.3
   cameraTransform: {fileID: 330585546}
 --- !u!143 &2141798291
 CharacterController:
