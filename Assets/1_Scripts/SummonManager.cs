@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SummonManager : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class SummonManager : MonoBehaviour
     private Dictionary<string, Queue<GameObject>> poolingObjectQueues = new Dictionary<string, Queue<GameObject>>();
 
     private List<GameObject> activeObjects = new List<GameObject>();
+
+    public GameObject[] summonPoint;
+    public float summonPointMoveDelay;
 
     private void InitializeObject(int initCount)
     {
@@ -78,16 +83,28 @@ public class SummonManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        StartCoroutine(MoveSummonPoint());
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            Debug.Log("space");
             instance.returnAll();
         }
     }
-    //IEnumerator Summon()
-    //{
-    //    yield return new WaitForSeconds(2f);
-    //}
+    IEnumerator MoveSummonPoint()
+    {
+        while (true)
+        {
+            for (int i = 0; i < summonPoint.Length; i++)
+            {
+                Vector2 randomPoint = Random.insideUnitCircle * 400f;
+                Debug.Log($"Summon Point {i} moved to ({randomPoint.x}, {randomPoint.y})");
+                summonPoint[i].transform.position = new Vector3(randomPoint.x, summonPoint[i].transform.position.y, randomPoint.y);
+            }
+            yield return new WaitForSeconds(summonPointMoveDelay);
+        }
+    }
 }
