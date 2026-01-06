@@ -20,10 +20,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _velocity; // Y축 속도 저장용
     private bool _isGrounded;
 
+    private Animator _anim;
+
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _controls = new PlayerControls();
+        _anim = GetComponent<Animator>();
 
         // [점프 이벤트 등록] 점프 버튼을 누른 '순간' 실행
         _controls.Player.Jump.performed += ctx => OnJump();
@@ -34,10 +37,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (_anim.GetBool("isRun"))
+            _anim.SetBool("isIdle", false);
+        else 
+            _anim.SetBool("isIdle", true);
+        //if(_isGrounded)
+        //    _anim.SetBool("isJump", false);
         // 1. 땅 체크
         _isGrounded = _controller.isGrounded;
-        if (_isGrounded && _velocity.y < 0)
+        
+        if (_isGrounded && _velocity.y <= 0)
         {
+            _anim.SetBool("isJump", false);
             _velocity.y = -2f; // 땅에 붙어있도록 작은 힘 유지
         }
 
@@ -55,24 +66,28 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveDirection.magnitude >= 0.1f)
         {
+            _anim.SetBool("isRun", true);
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
             
             _controller.Move(moveDirection * moveSpeed * Time.deltaTime);
         }
-
-        // 3. 중력 적용
-        _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+        else
+        {
+            _anim.SetBool("isRun", false);
+        }
+            // 3. 중력 적용
+            _velocity.y += gravity * Time.deltaTime;
+            _controller.Move(_velocity * Time.deltaTime);
     }
 
     // 점프 함수
     private void OnJump()
     {
-        if (_isGrounded)
-        {
-            // 물리 공식: v = sqrt(h * -2 * g)
-            _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        if (!_isGrounded)
+            return;
+        // 물리 공식: v = sqrt(h * -2 * g)
+        _anim.SetBool("isJump", true);
+        _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 }
