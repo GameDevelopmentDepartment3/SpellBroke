@@ -86,8 +86,10 @@ public class SummonManager : MonoBehaviour
             instance.returnAll();
         }
     }
-    IEnumerator Summon()
+    /*
+     IEnumerator Summon()
     {
         yield return new WaitForSeconds(2f);
     }
+    */
 }
