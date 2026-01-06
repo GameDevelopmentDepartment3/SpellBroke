@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbitalManager
   playerTransform: {fileID: 396432979}
-  baseRadius: 1.5
-  radiusPerObject: 0.5
-  maxRadius: 6
+  baseRadius: 6
+  radiusPerObject: 0.3
+  maxRadius: 7
   baseSpeed: 200
   speedDecreasePerObject: 20
   minSpeed: 50
@@ -1201,6 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1052d554b023645ceb5957e4dc6d6841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterAi
+  stopDistance: 5
 --- !u!1 &594114093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,7 +3429,7 @@ GameObject:
   - component: {fileID: 2132134067}
   - component: {fileID: 2132134066}
   - component: {fileID: 2132134065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

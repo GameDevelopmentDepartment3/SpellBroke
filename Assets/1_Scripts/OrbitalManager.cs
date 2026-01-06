@@ -85,9 +85,9 @@ public class OrbitalManager : MonoBehaviour
     public Transform playerTransform;
 
     [Header("Dynamic Settings (Base)")]
-    public float baseRadius = 1.5f;       // 최소 반지름 (갯수가 적을 때)
-    public float radiusPerObject = 0.5f;  // 갯수당 추가될 반지름
-    public float maxRadius = 6f;          // 최대 반지름 제한
+    public float baseRadius = 6f;       // 최소 반지름 (갯수가 적을 때)
+    public float radiusPerObject = 0.3f;  // 갯수당 추가될 반지름
+    public float maxRadius = 7f;          // 최대 반지름 제한
 
     public float baseSpeed = 200f;        // 최대 속도 (갯수가 적을 때)
     public float speedDecreasePerObject = 20f; // 갯수당 감소할 속도
