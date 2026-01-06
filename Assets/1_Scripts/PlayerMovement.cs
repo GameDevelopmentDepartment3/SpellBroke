@@ -37,9 +37,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (_anim.GetBool("isRun"))
+            _anim.SetBool("isIdle", false);
+        else 
+            _anim.SetBool("isIdle", true);
+        //if(_isGrounded)
+        //    _anim.SetBool("isJump", false);
         // 1. 땅 체크
         _isGrounded = _controller.isGrounded;
-        if (_isGrounded && _velocity.y < 0)
+        
+        if (_isGrounded && _velocity.y <= 0)
         {
             _anim.SetBool("isJump", false);
             _velocity.y = -2f; // 땅에 붙어있도록 작은 힘 유지
@@ -69,7 +76,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _anim.SetBool("isRun", false);
         }
-
             // 3. 중력 적용
             _velocity.y += gravity * Time.deltaTime;
             _controller.Move(_velocity * Time.deltaTime);
@@ -78,11 +84,10 @@ public class PlayerMovement : MonoBehaviour
     // 점프 함수
     private void OnJump()
     {
-        if (_isGrounded)
-        {
-            // 물리 공식: v = sqrt(h * -2 * g)
-            //_anim.SetBool("isJump", true);
-            _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        if (!_isGrounded)
+            return;
+        // 물리 공식: v = sqrt(h * -2 * g)
+        _anim.SetBool("isJump", true);
+        _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
 }
