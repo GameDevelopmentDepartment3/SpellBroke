@@ -501,6 +501,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HPBar
   fillImage: {fileID: 1076043625}
   maxHP: 100
+--- !u!1 &214919654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214919655}
+  - component: {fileID: 214919656}
+  m_Layer: 0
+  m_Name: SummonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214919655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214919654}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 497.37436, y: -0.00004, z: 460.8993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1060164002}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214919656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214919654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f0b9763cb53ca4a952fd266ac13f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SummonManager
+  ObjectPoolingPrefabs:
+  - {fileID: 4431304699381385800, guid: 71ba76ac67b6eae49be6c0084cbbd25e, type: 3}
+  - {fileID: 890042167993416166, guid: 41b0f95572d6bd749b3df4ee76613e99, type: 3}
+  summonPoint:
+  - {fileID: 1060164001}
+  summonPointMoveDelay: 6
 --- !u!1 &225926667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,21 +1973,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005197512}
   m_CullTransparentMesh: 1
---- !u!114 &1005197517
+--- !u!1 &1060164001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060164002}
+  - component: {fileID: 1060164003}
+  m_Layer: 0
+  m_Name: SummonPointGhost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060164002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060164001}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 214919655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060164003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005197512}
+  m_GameObject: {fileID: 1060164001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ec035ea811524131a57a27b37c1aced, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c66622538bb4b24d98336efb310192b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerXP
-  level: 1
-  currentXp: 0
-  maxXp: 100
+  m_EditorClassIdentifier: Assembly-CSharp::SummonPoint
+  summonDelay: 3
+  summonMonsterName: Ghost
 --- !u!1 &1076043621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3401,3 +3483,4 @@ SceneRoots:
   - {fileID: 1583776653}
   - {fileID: 1110730849}
   - {fileID: 1762672594}
+  - {fileID: 214919655}
