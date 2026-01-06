@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.33333337, g: 0.5924473, b: 1, a: 0.14117648}
+      maxColor: {r: 1, g: 0, b: 0.051016808, a: 0.14117648}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9760,7 +9760,7 @@ GameObject:
   - component: {fileID: 6469354921825657977}
   - component: {fileID: 5744350271466584198}
   m_Layer: 0
-  m_Name: Lightning aura
+  m_Name: Darkmagic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9973,7 +9973,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.15686274, g: 0.55694556, b: 1, a: 1}
+      maxColor: {r: 0, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
