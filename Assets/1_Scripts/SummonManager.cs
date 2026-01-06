@@ -106,5 +106,4 @@ public class SummonManager : MonoBehaviour
             yield return new WaitForSeconds(summonPointMoveDelay);
         }
     }
-    */
 }
