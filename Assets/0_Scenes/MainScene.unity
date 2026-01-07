@@ -449,6 +449,7 @@ MonoBehaviour:
   fillImage: {fileID: 1076043625}
   maxHP: 100
   deathUI: {fileID: 500680183}
+  hitEffect: {fileID: 832575520}
 --- !u!1 &141345512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,6 +3367,7 @@ MonoBehaviour:
   fillImage: {fileID: 225926669}
   currentXp: 0
   maxXp: 100
+  text: {fileID: 575862622}
 --- !u!1 &1059905130
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class HPBar : MonoBehaviour
     [SerializeField] private Image fillImage;
     [SerializeField] private float maxHP = 100f;
     [SerializeField] private DeathUI deathUI;
+    [SerializeField] private HitEffect hitEffect;
 
     private float currentHP;
     private bool isDead = false;
@@ -29,6 +30,7 @@ public class HPBar : MonoBehaviour
     {
         if (isDead) return;
 
+        hitEffect.PlayHitEffect();
         currentHP = Mathf.Clamp(currentHP - damage, 0f, maxHP);
         UpdateHP();
     }
