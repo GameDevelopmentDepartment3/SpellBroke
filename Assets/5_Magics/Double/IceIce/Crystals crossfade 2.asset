@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09b69b66bc544592956433c5693d349, type: 3}
   m_Name: Crystals crossfade 2
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
-  magicName: Crystals crossfade 2 Red
-  effectPrefab: {fileID: 584207449403360073, guid: b916328e634ce4d93aca749147e40b77, type: 3}
+  magicName: Crystals crossfade 2
+  effectPrefab: {fileID: 584207449403360073, guid: c6c1af1b0109746daa8facfaa608208c, type: 3}
+  duration: 2

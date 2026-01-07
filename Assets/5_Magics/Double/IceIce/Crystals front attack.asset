@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09b69b66bc544592956433c5693d349, type: 3}
   m_Name: Crystals front attack
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
-  magicName: Crystals front attack Red
-  effectPrefab: {fileID: 3156866507962234106, guid: 2fee5dc7685d44e7092316e258b51f64, type: 3}
+  magicName: Crystals front attack
+  effectPrefab: {fileID: 3156866507962234106, guid: ee7c0e4b8c2ec40999cd0fb9795e55b7, type: 3}
+  duration: 2

@@ -52,9 +52,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Element",
+                    "name": "Fire",
                     "type": "Button",
                     "id": "e50def19-faed-4287-b033-b3251ce1ec06",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ice",
+                    "type": "Button",
+                    "id": "75aca9ac-3cdb-42c3-a33f-f059d046b114",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Electricity",
+                    "type": "Button",
+                    "id": "7ed14cef-8b10-49f1-aa78-70baec859248",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Casting",
+                    "type": "Button",
+                    "id": "a52f4b5d-fe58-4b87-9507-f2aff1084920",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -164,11 +191,44 @@
                 {
                     "name": "",
                     "id": "556c8179-30fc-482f-a4fb-f18e513edb49",
-                    "path": "",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Element",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60ac6818-db51-45a4-8cf8-b9bccf8633fb",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ice",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61420018-0eb4-4fb1-876e-64c3c660a39d",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Electricity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c343b9a-ae60-4dc2-86fa-fe5fb627727f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Casting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
