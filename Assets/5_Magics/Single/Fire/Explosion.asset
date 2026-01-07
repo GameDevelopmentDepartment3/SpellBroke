@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e09b69b66bc544592956433c5693d349, type: 3}
-  m_Name: Fire
+  m_Name: Explosion
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
-  magicName: Fire
+  magicName: Explosion
   effectPrefab: {fileID: 358637981425055526, guid: 2dc8e416bc0214337be10f96721c2ab8, type: 3}
