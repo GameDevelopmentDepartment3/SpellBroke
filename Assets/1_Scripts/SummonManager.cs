@@ -86,13 +86,6 @@ public class SummonManager : MonoBehaviour
     {
         StartCoroutine(MoveSummonPoint());
     }
-    void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            instance.returnAll();
-        }
-    }
     IEnumerator MoveSummonPoint()
     {
         while (true)
