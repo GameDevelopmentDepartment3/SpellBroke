@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class XPBar : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class XPBar : MonoBehaviour
 
     public float currentXp = 0f;
     public float maxXp = 100f;   // 시작 최대 XP
+    public TextMeshProUGUI text;
     
     /// 경험치 추가
     public void AddXp(float amount)
@@ -24,14 +26,9 @@ public class XPBar : MonoBehaviour
     void Update()
     {
         // q & e  테스트
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+        if (Keyboard.current.numpadPlusKey.wasPressedThisFrame)
         {
-            currentXp -= 10;
-        }
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            currentXp += 10;
+            AddXp(10f);
         }
     }
 
@@ -44,6 +41,8 @@ public class XPBar : MonoBehaviour
 
         // 다음 maxXp = 이전 maxXp * 3 / 2
         maxXp = maxXp * 3f / 2f;
+
+        text.text = $"{level}";
 
         Debug.Log($"레벨 업! 현재 레벨: {level}, 다음 maxXp: {maxXp}");
     }
