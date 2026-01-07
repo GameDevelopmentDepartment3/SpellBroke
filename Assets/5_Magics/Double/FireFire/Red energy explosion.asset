@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Red energy explosion
   effectPrefab: {fileID: 8378648546881499446, guid: ff44c0f7316ad4372a01e14fd2051789, type: 3}
+  duration: 2

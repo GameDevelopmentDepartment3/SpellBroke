@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Simple Magic", menuName = "Magics/Simple")]
@@ -5,10 +6,19 @@ public class SimpleMagicSO : MagicData
 {
     public GameObject effectPrefab;
     public override string Name => magicName;
+    public float duration = 0f;
 
     public override void Cast(Vector3 position)
     {
         if (effectPrefab != null)
-            Instantiate(effectPrefab, position, Quaternion.identity);
+        {
+            UnityEngine.Debug.Log(Name);
+            GameObject effect = Instantiate(effectPrefab, position, Quaternion.identity);
+            if (duration > 0)
+            {
+                Destroy(effect, duration); // 지정된 시간 뒤에 자동 삭제
+            }
+            
+        }
     }
 }
