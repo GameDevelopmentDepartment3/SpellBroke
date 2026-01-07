@@ -8,6 +8,21 @@ public class HPBar : MonoBehaviour
     [SerializeField] private float maxHP = 100f;
 
     private float currentHP;
+    public float Hp
+    {
+        get {  return currentHP; }
+        set
+        {
+            if (value <= 0)
+            {
+                currentHP = 0;
+            }
+            else if (value > maxHP)
+                currentHP = maxHP;
+            else
+                currentHP = value;
+        }
+    }
 
     void Start()
     {
