@@ -1828,7 +1828,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 534783973}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: e88150c9ff8c952438bf2a49ef0e0dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
@@ -2085,13 +2084,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673012371}
   m_Mesh: {fileID: 0}
-=======
-  m_Script: {fileID: 11500000, guid: 7c2581307ffefe243bb72660183f5904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthScript
-  maxHP: 100
-  enemyName: Ghost
->>>>>>> Stashed changes
 --- !u!1 &684534773
 GameObject:
   m_ObjectHideFlags: 0
