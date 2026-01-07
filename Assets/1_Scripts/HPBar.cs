@@ -6,9 +6,9 @@ public class HPBar : MonoBehaviour
 {
     [SerializeField] private Image fillImage;
     [SerializeField] private float maxHP = 100f;
-
+    [SerializeField] private PlayerDeath playerDeath;
     private float currentHP;
-
+    
     void Start()
     {
         currentHP = maxHP;
@@ -38,5 +38,10 @@ public class HPBar : MonoBehaviour
     private void UpdateHP()
     {
         fillImage.fillAmount = currentHP / maxHP;
+
+        if (currentHP <= 0)
+        {
+            playerDeath.Die();
+        }
     }
 }
