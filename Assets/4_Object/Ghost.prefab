@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 3616003052782696684}
   - component: {fileID: 6848921922545638514}
   - component: {fileID: 5270179638036996581}
+  - component: {fileID: 3125392555839510379}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -383,10 +384,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.123165414
-  m_Height: 0.72979474
+  m_Radius: 0.145118
+  m_Height: 0.73960495
   m_Direction: 1
-  m_Center: {x: -0.013017136, y: 0.33346325, z: 0.0076813805}
+  m_Center: {x: -0.0075883865, y: 0.33836842, z: 0.00768137}
 --- !u!195 &6848921922545638514
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -422,6 +423,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MonsterAi
   stopDistance: 3
+--- !u!114 &3125392555839510379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431304699381385800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88150c9ff8c952438bf2a49ef0e0dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  maxHP: 100
+  EnemyName: Ghost
 --- !u!1 &5738598203429167148
 GameObject:
   m_ObjectHideFlags: 0
