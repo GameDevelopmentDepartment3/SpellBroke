@@ -8,19 +8,20 @@ public class XPBar : MonoBehaviour
 {
     public int level = 1;
 
+    [SerializeField] private Image fillImage;
     public float currentXp = 0f;
     public float maxXp = 100f;   // 시작 최대 XP
     public TextMeshProUGUI text;
-    
+    private void Start()
+    {
+        AddXp(0);
+    }
+
     /// 경험치 추가
     public void AddXp(float amount)
     {
         currentXp += amount;
-
-        if (currentXp >= maxXp)
-        {
-            LevelUp();
-        }
+        UpdateXP();
     }
 
     void Update()
@@ -45,5 +46,16 @@ public class XPBar : MonoBehaviour
         text.text = $"{level}";
 
         Debug.Log($"레벨 업! 현재 레벨: {level}, 다음 maxXp: {maxXp}");
+    }
+    private void UpdateXP()
+    {
+        fillImage.fillAmount = currentXp / maxXp;
+
+        if (currentXp >= maxXp)
+        {
+            currentXp = 0;
+            UpdateXP();
+            LevelUp();
+        }
     }
 }
