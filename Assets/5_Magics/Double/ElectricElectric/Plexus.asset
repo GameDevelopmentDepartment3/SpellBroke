@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Plexus
   effectPrefab: {fileID: 6063518424537689786, guid: 3d9aa9cb6bfc8434db12f6433ba85328, type: 3}
+  duration: 1

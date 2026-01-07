@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Snow hit
   effectPrefab: {fileID: 4924508274929071776, guid: b32892678ce3f4662a613764c50b96ea, type: 3}
+  duration: 1

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Explosion
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Explosion
-  effectPrefab: {fileID: 358637981425055526, guid: 2dc8e416bc0214337be10f96721c2ab8, type: 3}
+  effectPrefab: {fileID: 358637981425055526, guid: 1012fc265dafe479892529a4cb702e68, type: 3}
+  duration: 1

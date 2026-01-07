@@ -138,9 +138,36 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Element"",
+                    ""name"": ""Fire"",
                     ""type"": ""Button"",
                     ""id"": ""e50def19-faed-4287-b033-b3251ce1ec06"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ice"",
+                    ""type"": ""Button"",
+                    ""id"": ""75aca9ac-3cdb-42c3-a33f-f059d046b114"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Electricity"",
+                    ""type"": ""Button"",
+                    ""id"": ""7ed14cef-8b10-49f1-aa78-70baec859248"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Casting"",
+                    ""type"": ""Button"",
+                    ""id"": ""a52f4b5d-fe58-4b87-9507-f2aff1084920"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -250,11 +277,44 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""556c8179-30fc-482f-a4fb-f18e513edb49"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Element"",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60ac6818-db51-45a4-8cf8-b9bccf8633fb"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61420018-0eb4-4fb1-876e-64c3c660a39d"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Electricity"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c343b9a-ae60-4dc2-86fa-fe5fb627727f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Casting"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -270,7 +330,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_AddOrbital = m_Player.FindAction("AddOrbital", throwIfNotFound: true);
         m_Player_RemoveOrbital = m_Player.FindAction("RemoveOrbital", throwIfNotFound: true);
-        m_Player_Element = m_Player.FindAction("Element", throwIfNotFound: true);
+        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
+        m_Player_Ice = m_Player.FindAction("Ice", throwIfNotFound: true);
+        m_Player_Electricity = m_Player.FindAction("Electricity", throwIfNotFound: true);
+        m_Player_Casting = m_Player.FindAction("Casting", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -356,7 +419,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_AddOrbital;
     private readonly InputAction m_Player_RemoveOrbital;
-    private readonly InputAction m_Player_Element;
+    private readonly InputAction m_Player_Fire;
+    private readonly InputAction m_Player_Ice;
+    private readonly InputAction m_Player_Electricity;
+    private readonly InputAction m_Player_Casting;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -389,9 +455,21 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @RemoveOrbital => m_Wrapper.m_Player_RemoveOrbital;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Element".
+        /// Provides access to the underlying input action "Player/Fire".
         /// </summary>
-        public InputAction @Element => m_Wrapper.m_Player_Element;
+        public InputAction @Fire => m_Wrapper.m_Player_Fire;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Ice".
+        /// </summary>
+        public InputAction @Ice => m_Wrapper.m_Player_Ice;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Electricity".
+        /// </summary>
+        public InputAction @Electricity => m_Wrapper.m_Player_Electricity;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Casting".
+        /// </summary>
+        public InputAction @Casting => m_Wrapper.m_Player_Casting;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -433,9 +511,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @RemoveOrbital.started += instance.OnRemoveOrbital;
             @RemoveOrbital.performed += instance.OnRemoveOrbital;
             @RemoveOrbital.canceled += instance.OnRemoveOrbital;
-            @Element.started += instance.OnElement;
-            @Element.performed += instance.OnElement;
-            @Element.canceled += instance.OnElement;
+            @Fire.started += instance.OnFire;
+            @Fire.performed += instance.OnFire;
+            @Fire.canceled += instance.OnFire;
+            @Ice.started += instance.OnIce;
+            @Ice.performed += instance.OnIce;
+            @Ice.canceled += instance.OnIce;
+            @Electricity.started += instance.OnElectricity;
+            @Electricity.performed += instance.OnElectricity;
+            @Electricity.canceled += instance.OnElectricity;
+            @Casting.started += instance.OnCasting;
+            @Casting.performed += instance.OnCasting;
+            @Casting.canceled += instance.OnCasting;
         }
 
         /// <summary>
@@ -462,9 +549,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @RemoveOrbital.started -= instance.OnRemoveOrbital;
             @RemoveOrbital.performed -= instance.OnRemoveOrbital;
             @RemoveOrbital.canceled -= instance.OnRemoveOrbital;
-            @Element.started -= instance.OnElement;
-            @Element.performed -= instance.OnElement;
-            @Element.canceled -= instance.OnElement;
+            @Fire.started -= instance.OnFire;
+            @Fire.performed -= instance.OnFire;
+            @Fire.canceled -= instance.OnFire;
+            @Ice.started -= instance.OnIce;
+            @Ice.performed -= instance.OnIce;
+            @Ice.canceled -= instance.OnIce;
+            @Electricity.started -= instance.OnElectricity;
+            @Electricity.performed -= instance.OnElectricity;
+            @Electricity.canceled -= instance.OnElectricity;
+            @Casting.started -= instance.OnCasting;
+            @Casting.performed -= instance.OnCasting;
+            @Casting.canceled -= instance.OnCasting;
         }
 
         /// <summary>
@@ -541,11 +637,32 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRemoveOrbital(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Element" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Fire" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnElement(InputAction.CallbackContext context);
+        void OnFire(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Ice" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnIce(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Electricity" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnElectricity(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Casting" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCasting(InputAction.CallbackContext context);
     }
 }

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Electro slash
   effectPrefab: {fileID: 1171201465392465800, guid: 40bc97607a3584b34beb81326901f90f, type: 3}
+  duration: 1
