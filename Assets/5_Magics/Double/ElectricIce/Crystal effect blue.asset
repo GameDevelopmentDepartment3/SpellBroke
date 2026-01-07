@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Crystal effect blue
   effectPrefab: {fileID: 683182934616091483, guid: ed24f9ae363934db9a57a909706749f1, type: 3}
+  duration: 4
