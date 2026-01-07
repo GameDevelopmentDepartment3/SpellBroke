@@ -755,7 +755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &214919655
 Transform:
   m_ObjectHideFlags: 0
@@ -3926,6 +3926,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: 1
       addedObject: {fileID: 396432979}
+    - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1996752158}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
@@ -4126,6 +4129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagicManager
   myMagics:
   - {fileID: 11400000, guid: 5374f58cc0054436e8508a156bacbb71, type: 2}
+  - {fileID: 11400000, guid: e59a60a669d284e5b844d3a57f217f3c, type: 2}
+  - {fileID: 11400000, guid: f828e7941b127469a97b8e3a997defeb, type: 2}
+  testTarget: {fileID: 1996752157}
 --- !u!4 &1238170929
 Transform:
   m_ObjectHideFlags: 0
@@ -4155,7 +4161,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498253721416304272, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
       propertyPath: m_Name
-      value: LittleGhost_LP (1)
+      value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 498253721416304272, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 498253721416304279, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
       propertyPath: m_IsTrigger
@@ -5279,6 +5289,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980004525}
   m_CullTransparentMesh: 1
+--- !u!1 &1996752157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996752158}
+  m_Layer: 0
+  m_Name: magicTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996752158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996752157}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634810358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2040177442
 PrefabInstance:
   m_ObjectHideFlags: 0
