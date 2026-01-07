@@ -754,7 +754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &214919655
 Transform:
   m_ObjectHideFlags: 0
@@ -786,6 +786,7 @@ MonoBehaviour:
   ObjectPoolingPrefabs:
   - {fileID: 4431304699381385800, guid: 71ba76ac67b6eae49be6c0084cbbd25e, type: 3}
   - {fileID: 890042167993416166, guid: 41b0f95572d6bd749b3df4ee76613e99, type: 3}
+  - {fileID: 6447680263275987239, guid: db994a70180db334482b22e77dfbfcf2, type: 3}
   summonPoint:
   - {fileID: 1060164001}
   summonPointMoveDelay: 6
@@ -4077,7 +4078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68642f9a024814d2abd6767e74670c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagicManager
-  myMagics: []
+  myMagics:
+  - {fileID: 11400000, guid: 5374f58cc0054436e8508a156bacbb71, type: 2}
 --- !u!4 &1238170929
 Transform:
   m_ObjectHideFlags: 0
@@ -4101,6 +4103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 498253721392136722, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 498253721416304272, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
       propertyPath: m_Name
       value: LittleGhost_LP (1)
@@ -4161,8 +4167,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 498253722092276483, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 498253721392136722, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 498253721416304272, guid: f6ab88624626d1249bd73bcb4a1c7d59, type: 3}
@@ -5885,3 +5896,4 @@ SceneRoots:
   - {fileID: 1762672594}
   - {fileID: 214919655}
   - {fileID: 1238170929}
+  - {fileID: 2553660759940461092}
