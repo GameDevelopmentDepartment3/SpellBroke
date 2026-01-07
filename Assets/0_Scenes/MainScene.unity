@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HPBar
   fillImage: {fileID: 1076043625}
   maxHP: 100
+  deathUI: {fileID: 0}
 --- !u!1 &175190127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,8 +2832,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XPBar
   level: 1
+  fillImage: {fileID: 225926669}
   currentXp: 0
   maxXp: 100
+  text: {fileID: 575862622}
 --- !u!1 &1059905130
 GameObject:
   m_ObjectHideFlags: 0
