@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: Crystals front attack Red
   effectPrefab: {fileID: 3156866507962234106, guid: 2fee5dc7685d44e7092316e258b51f64, type: 3}
+  duration: 2

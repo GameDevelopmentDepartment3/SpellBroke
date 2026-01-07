@@ -21,15 +21,6 @@ public class HitEffect : MonoBehaviour
         globalVolume.profile.TryGet(out dof);
     }
 
-    void Update()
-    {
-        // 테스트용
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            PlayHitEffect();
-        }
-    }
-
     /// <summary>
     /// 외부에서 호출하는 피격 함수
     /// </summary>
