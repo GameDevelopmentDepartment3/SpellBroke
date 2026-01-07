@@ -1,10 +1,22 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
-    public void ChangeScene()
+    public Button targetButton;
+
+    void Start()
     {
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
+
+    void Update()
+    {
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
