@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3986179179329749341}
   - component: {fileID: 4596544553357837919}
   - component: {fileID: 3005581896905022112}
+  - component: {fileID: 6824484547814917463}
+  - component: {fileID: -4026772950504505629}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -4906,6 +4908,40 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!135 &6824484547814917463
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358637981425055526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4.1206365
+  m_Center: {x: -0.061782837, y: 0.24654531, z: 0.33371162}
+--- !u!114 &-4026772950504505629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358637981425055526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
+  damage: 50
 --- !u!1 &5084589283769131857
 GameObject:
   m_ObjectHideFlags: 0
