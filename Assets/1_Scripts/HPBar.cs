@@ -6,8 +6,10 @@ public class HPBar : MonoBehaviour
 {
     [SerializeField] private Image fillImage;
     [SerializeField] private float maxHP = 100f;
+    [SerializeField] private DeathUI deathUI;
 
     private float currentHP;
+    private bool isDead = false;
 
     void Start()
     {
@@ -17,20 +19,16 @@ public class HPBar : MonoBehaviour
 
     void Update()
     {
-        // q & e 체력 테스트
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
         {
             TakeDamage(10f);
-        }
-
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            TakeDamage(-10f);
         }
     }
 
     public void TakeDamage(float damage)
     {
+        if (isDead) return;
+
         currentHP = Mathf.Clamp(currentHP - damage, 0f, maxHP);
         UpdateHP();
     }
@@ -38,5 +36,11 @@ public class HPBar : MonoBehaviour
     private void UpdateHP()
     {
         fillImage.fillAmount = currentHP / maxHP;
+
+        if (currentHP <= 0 && !isDead)
+        {
+            isDead = true;
+            deathUI.OnDeath();
+        }
     }
 }
