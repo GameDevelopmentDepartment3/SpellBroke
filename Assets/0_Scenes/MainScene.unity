@@ -2752,7 +2752,6 @@ GameObject:
   - component: {fileID: 1005197513}
   - component: {fileID: 1005197516}
   - component: {fileID: 1005197515}
-  - component: {fileID: 1005197517}
   m_Layer: 5
   m_Name: Xp
   m_TagString: Untagged
@@ -3556,6 +3555,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_PrefabInstance: {fileID: 1131110109}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1238170927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238170929}
+  - component: {fileID: 1238170928}
+  m_Layer: 0
+  m_Name: MagicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1238170928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238170927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68642f9a024814d2abd6767e74670c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicManager
+  myMagics: []
+--- !u!4 &1238170929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238170927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 541.7026, y: 0, z: 496.17722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1325753568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5258,3 +5302,4 @@ SceneRoots:
   - {fileID: 1110730849}
   - {fileID: 1762672594}
   - {fileID: 214919655}
+  - {fileID: 1238170929}
