@@ -19648,7 +19648,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.2477e-41, y: 1e-45, z: 0, w: 3.9615805e+28}
+  m_BoundingSphereOverride: {x: 4e-45, y: 0.00076617394, z: 4e-45, w: 4.0916723e+30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -24620,7 +24620,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3844, y: 1.3398, z: 1.3556}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5135655739932955482}

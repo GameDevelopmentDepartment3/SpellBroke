@@ -23,17 +23,14 @@ public class MagicManager : MonoBehaviour
     {
         if (_controls.Player.Electricity.triggered)
         {
-            Debug.Log("E");
             elements.Enqueue(1);
         }
         else if (_controls.Player.Fire.triggered)
         {
-            Debug.Log("F");
             elements.Enqueue(3);
         }
         else if (_controls.Player.Ice.triggered)
         {
-            Debug.Log("I");
             elements.Enqueue(7);
         }
         if (elements.Count > 2)
@@ -42,7 +39,6 @@ public class MagicManager : MonoBehaviour
         }
         if (_controls.Player.Casting.triggered)
         {
-            Debug.Log("C");
             Casting();
         }
     }
@@ -107,8 +103,14 @@ public class MagicManager : MonoBehaviour
                 {
                     myMagics[8].Cast(targets[1].transform.position);
                 } break; // FireFire
-            // case 10: break; // FireIce
-            // case 14: break; // IceIce
+            case 10:
+                {
+                    myMagics[9].Cast(targets[2].transform.position);
+                } break; // FireIce
+            case 14:
+                {
+                    myMagics[10].Cast(targets[2].transform.position);
+                } break; // IceIce
         }
     }
 }
