@@ -17,7 +17,8 @@ public class SummonManager : MonoBehaviour
 
     public GameObject[] summonPoint;
     public float summonPointMoveDelay;
-
+    
+    [SerializeField] private GameObject xpOrbPrefab;
     private void InitializeObject(int initCount)
     {
         for (int i = 0; i < ObjectPoolingPrefabs.Length; i++)
@@ -98,5 +99,12 @@ public class SummonManager : MonoBehaviour
             }
             yield return new WaitForSeconds(summonPointMoveDelay);
         }
+    }
+    
+    // xp
+    public void DropXP(GameObject target)
+    {
+        GameObject orb = GetObject("XPOrb");
+        orb.transform.position = target.transform.position;
     }
 }

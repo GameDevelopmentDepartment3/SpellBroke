@@ -20,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
             else
                 currentHP = value;
             Debug.Log($"Enemy HP: {currentHP}/{maxHP}");
+            Die();
+            
         }
 
     }
@@ -39,4 +41,9 @@ public class EnemyHealth : MonoBehaviour
         Hp -= damage;
     }
 
+    private void Die()
+    {
+        SummonManager.instance.DropXP(gameObject);
+        SummonManager.instance.returnObject(EnemyName, gameObject);
+    }
 }
