@@ -2656,6 +2656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHP: 100
   EnemyName: Ghost
+  childObject: {fileID: 0}
 --- !u!23 &534783989
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5142,7 +5143,6 @@ MonoBehaviour:
   targets:
   - {fileID: 1996752157}
   - {fileID: 24338824}
-  testTarget: {fileID: 1996752157}
   detector: {fileID: 697924533}
 --- !u!4 &1238170929
 Transform:
