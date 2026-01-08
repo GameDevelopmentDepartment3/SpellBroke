@@ -7,6 +7,8 @@ public class SummonManager : MonoBehaviour
 {
     public static SummonManager instance;
 
+    public TargetDetector detector;
+
     [SerializeField]
     private GameObject[] ObjectPoolingPrefabs;
     private Dictionary<string, GameObject> poolingObjectPrefabs = new Dictionary<string, GameObject>();
@@ -58,6 +60,15 @@ public class SummonManager : MonoBehaviour
     }
     public void returnObject(string objectName, GameObject obj)
     {
+        for (int i = detector.detectedTargets.Count - 1; i >= 0; i--)
+        {
+            Debug.Log($"Checking detected target at index {i}");
+            if (detector.detectedTargets[i].gameObject == obj)
+            {
+                Debug.Log($"Removing {obj.name} from detected targets");
+                detector.detectedTargets.Remove(detector.detectedTargets[i]);
+            }
+        }
         obj.gameObject.transform.position = Vector3.zero;
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(instance.transform);

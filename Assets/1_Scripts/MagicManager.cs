@@ -63,14 +63,13 @@ public class MagicManager : MonoBehaviour
         {
             if (elements.Count > 0) w += elements.Dequeue();
         }
-        Vector3 target;
         if (detector.GetClosestEnemy() != null)
         {
             Debug.Log($"{detector.GetClosestEnemy().name}");
-            target = detector.GetClosestEnemy().position;
+            targets[0].transform.position = detector.GetClosestEnemy().position;
         }
         else
-            target = testTarget.transform.position;
+            targets[0].transform.position = targets[1].transform.position + new Vector3(0,1,0);
         switch (w)
         {
             case 1:
