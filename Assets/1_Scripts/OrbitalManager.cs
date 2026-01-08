@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Threading;
 
 public class OrbitalManager : MonoBehaviour
 {
@@ -90,6 +91,7 @@ public class OrbitalManager : MonoBehaviour
 
     public void AddOrbital(int typeIndex)
     {
+        if (_activeOrbitals.Count > 10) return;
         if (typeIndex >= crystalPrefabs.Length) return;
         GameObject newOrbital = Instantiate(crystalPrefabs[typeIndex], transform);
         _activeOrbitals.Add(newOrbital);
