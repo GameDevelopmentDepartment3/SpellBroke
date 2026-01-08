@@ -69,7 +69,6 @@ public class SummonManager : MonoBehaviour
                 detector.detectedTargets.Remove(detector.detectedTargets[i]);
             }
         }
-        obj.gameObject.transform.position = Vector3.zero;
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(instance.transform);
         instance.poolingObjectQueues[objectName].Enqueue(obj);
@@ -105,9 +104,7 @@ public class SummonManager : MonoBehaviour
         {
             for (int i = 0; i < summonPoint.Length; i++)
             {
-                Vector2 randomPoint = Random.insideUnitCircle * 400f;
-                Debug.Log($"Summon Point {i} moved to ({randomPoint.x}, {randomPoint.y})");
-                summonPoint[i].transform.position = new Vector3(randomPoint.x, summonPoint[i].transform.position.y, randomPoint.y);
+                summonPoint[i].transform.position = new Vector3(Random.Range(100,880), summonPoint[i].transform.position.y, Random.Range(100,880));
             }
             yield return new WaitForSeconds(summonPointMoveDelay);
         }
