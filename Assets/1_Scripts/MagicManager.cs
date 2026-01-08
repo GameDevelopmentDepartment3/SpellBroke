@@ -5,6 +5,7 @@ public class MagicManager : MonoBehaviour
 {
     // 인스펙터에서 MagicData(SimpleMagicSO 또는 CompositeMagicSO)를 드래그 앤 드롭 가능
     public List<MagicData> myMagics;
+    public GameObject[] targets;
     public GameObject testTarget;
     public TargetDetector detector;
     
@@ -74,22 +75,29 @@ public class MagicManager : MonoBehaviour
         {
             case 1:
                 {
-                    myMagics[0].Cast(target);
+                    myMagics[0].Cast(targets[0].transform.position);
                 } break; // E
             case 3:
                 {
-                    myMagics[1].Cast(target);
+                    myMagics[1].Cast(targets[0].transform.position);
                 } break; // F
             case 7:
                 {
-                    myMagics[2].Cast(target);
+                    myMagics[2].Cast(targets[0].transform.position);
                 } break; // I
-            // case 2: break; // EE
-            // case 6: break; // FF
-            // case 14: break; // II
-            // case 4: break; // EF
-            // case 8: break; // EI
+            case 2:
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        myMagics[3].Cast(targets[1].transform.position);
+                        myMagics[4].Cast(targets[1].transform.position);
+                    }
+                } break; // EE
+            case 6: break; // EF
+            case 8: break; // EI
+            case 4: break; // FF
             // case 10: break; // FI
+            // case 14: break; // II
         }
     }
 }
