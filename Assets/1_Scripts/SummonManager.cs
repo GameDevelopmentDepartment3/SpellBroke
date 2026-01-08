@@ -69,7 +69,6 @@ public class SummonManager : MonoBehaviour
                 detector.detectedTargets.Remove(detector.detectedTargets[i]);
             }
         }
-        obj.gameObject.transform.position = Vector3.zero;
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(instance.transform);
         instance.poolingObjectQueues[objectName].Enqueue(obj);
