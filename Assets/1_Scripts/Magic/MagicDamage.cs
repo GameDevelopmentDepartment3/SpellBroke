@@ -9,20 +9,20 @@ public class MagicDamage : MonoBehaviour
         switch (attackType)
         {
             case "ImmediateMagic":
-                ImmediatelyMagicAttack();
+                ImmediatelyMagicAttack(other);
                 break;
             case "OverTimeMagic":
                 OverTimeMagicAttack();
                 break;
         }
+    }
+    public void ImmediatelyMagicAttack(Collider other)
+    {
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
         }
-    }
-    public void ImmediatelyMagicAttack()
-    {
-
+        Destroy(this);
     }
     public void OverTimeMagicAttack()
     {
