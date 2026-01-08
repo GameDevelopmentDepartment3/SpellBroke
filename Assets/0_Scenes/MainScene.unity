@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 109300704}
   - component: {fileID: 109300703}
   - component: {fileID: 109300705}
+  - component: {fileID: 109300706}
   m_Layer: 5
   m_Name: UPAT
   m_TagString: Untagged
@@ -646,18 +647,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 109300706}
+        m_TargetAssemblyTypeName: AugmentButton, Assembly-CSharp
+        m_MethodName: SelectAugment
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &109300706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109300701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 1
+  player: {fileID: 2141798297}
+  augmentUI: {fileID: 1666068031}
 --- !u!1 &127736603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f0b9763cb53ca4a952fd266ac13f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummonManager
+  detector: {fileID: 697924533}
   ObjectPoolingPrefabs:
   - {fileID: 4431304699381385800, guid: 71ba76ac67b6eae49be6c0084cbbd25e, type: 3}
   - {fileID: 890042167993416166, guid: 41b0f95572d6bd749b3df4ee76613e99, type: 3}
@@ -1257,6 +1274,7 @@ GameObject:
   - component: {fileID: 275057009}
   - component: {fileID: 275057008}
   - component: {fileID: 275057010}
+  - component: {fileID: 275057011}
   m_Layer: 5
   m_Name: UPSP
   m_TagString: Untagged
@@ -1366,18 +1384,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 275057011}
+        m_TargetAssemblyTypeName: AugmentButton, Assembly-CSharp
+        m_MethodName: SelectAugment
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &275057011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275057006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 2
+  player: {fileID: 2141798297}
+  augmentUI: {fileID: 1666068031}
 --- !u!1001 &324824515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3633,6 +3666,7 @@ GameObject:
   - component: {fileID: 935380191}
   - component: {fileID: 935380190}
   - component: {fileID: 935380192}
+  - component: {fileID: 935380193}
   m_Layer: 5
   m_Name: UPHP
   m_TagString: Untagged
@@ -3742,18 +3776,33 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 935380193}
+        m_TargetAssemblyTypeName: AugmentButton, Assembly-CSharp
+        m_MethodName: SelectAugment
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &935380193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935380188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 0
+  player: {fileID: 2141798297}
+  augmentUI: {fileID: 1666068031}
 --- !u!1 &967437369
 GameObject:
   m_ObjectHideFlags: 0
@@ -4840,6 +4889,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2141798297}
+    - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2141798298}
   m_SourcePrefab: {fileID: 100100000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
 --- !u!1 &1142072307
 GameObject:
@@ -7253,6 +7305,20 @@ MonoBehaviour:
   maxHP: 100
   attack: 10
   moveSpeed: 5
+--- !u!114 &2141798298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229293000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763247d2485126c4989271eb0da62f82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShiftLock
+  cameraTransform: {fileID: 330585546}
+  isShiftLockActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
