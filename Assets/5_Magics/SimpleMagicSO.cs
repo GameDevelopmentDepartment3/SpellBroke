@@ -8,7 +8,7 @@ public class SimpleMagicSO : MagicData
     public override string Name => magicName;
     public float duration = 0f;
 
-    public override void Cast(Vector3 position)
+    public override int Cast(Vector3 position)
     {
         if (effectPrefab != null)
         {
@@ -18,7 +18,8 @@ public class SimpleMagicSO : MagicData
             {
                 Destroy(effect, duration); // 지정된 시간 뒤에 자동 삭제
             }
-            
         }
+
+        return 0;
     }
 }
