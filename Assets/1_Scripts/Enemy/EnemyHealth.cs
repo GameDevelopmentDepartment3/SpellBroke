@@ -44,7 +44,10 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Hp -= damage;
-        StartCoroutine(Hit());
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(Hit());
+        }
     }
 
     private void Die()
