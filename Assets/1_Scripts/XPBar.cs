@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class XPBar : MonoBehaviour
 {
+    public static event Action OnLevelUp;
     [SerializeField] private Image fillImage;
     [SerializeField] private TextMeshProUGUI levelText;
     
@@ -12,4 +14,6 @@ public class XPBar : MonoBehaviour
         fillImage.fillAmount = currentXp / maxXp;
         levelText.text = level.ToString();
     }
+
+    
 }
