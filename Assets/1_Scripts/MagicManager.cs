@@ -68,11 +68,7 @@ public class MagicManager : MonoBehaviour
             targets[0].transform.position = detector.GetClosestEnemy().position;
         }
         else
-<<<<<<< HEAD
-            target = targets[0].transform.position;
-=======
             targets[0].transform.position = targets[1].transform.position + new Vector3(0,1,0);
->>>>>>> origin/hyper
         switch (w)
         {
             case 1:
