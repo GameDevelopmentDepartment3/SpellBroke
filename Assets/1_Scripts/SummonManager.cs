@@ -58,6 +58,7 @@ public class SummonManager : MonoBehaviour
     }
     public void returnObject(string objectName, GameObject obj)
     {
+        obj.gameObject.transform.position = Vector3.zero;
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(instance.transform);
         instance.poolingObjectQueues[objectName].Enqueue(obj);
