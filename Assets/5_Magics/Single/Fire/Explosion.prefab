@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
   damage: 50
+  attackType: ImmediateMagic
 --- !u!1 &5084589283769131857
 GameObject:
   m_ObjectHideFlags: 0
