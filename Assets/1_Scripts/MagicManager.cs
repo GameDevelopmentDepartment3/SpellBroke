@@ -6,7 +6,6 @@ public class MagicManager : MonoBehaviour
     // 인스펙터에서 MagicData(SimpleMagicSO 또는 CompositeMagicSO)를 드래그 앤 드롭 가능
     public List<MagicData> myMagics;
     public GameObject[] targets;
-    public GameObject testTarget;
     public TargetDetector detector;
     
     private PlayerControls _controls;
@@ -70,34 +69,41 @@ public class MagicManager : MonoBehaviour
             target = detector.GetClosestEnemy().position;
         }
         else
-            target = testTarget.transform.position;
+            target = targets[0].transform.position;
         switch (w)
         {
             case 1:
                 {
                     myMagics[0].Cast(targets[0].transform.position);
-                } break; // E
+                } break; // Elec
             case 3:
                 {
                     myMagics[1].Cast(targets[0].transform.position);
-                } break; // F
+                } break; // Fire
             case 7:
                 {
                     myMagics[2].Cast(targets[0].transform.position);
-                } break; // I
+                } break; // Ice
             case 2:
                 {
-                    for (int i = 0; i < 5; i++)
-                    {
-                        myMagics[3].Cast(targets[1].transform.position);
-                        myMagics[4].Cast(targets[1].transform.position);
-                    }
-                } break; // EE
-            case 6: break; // EF
-            case 8: break; // EI
-            case 4: break; // FF
-            // case 10: break; // FI
-            // case 14: break; // II
+                    myMagics[3].Cast(targets[1].transform.position);
+                    myMagics[4].Cast(targets[1].transform.position);
+                } break; // ElecElec
+            case 4:
+                {
+                    myMagics[5].Cast(targets[0].transform.position);
+                } break; // ElecFire
+            case 8:
+                {
+                    myMagics[6].Cast(targets[0].transform.position);
+                    myMagics[7].Cast(targets[0].transform.position);
+                } break; // ElecIce
+            case 6:
+                {
+                    myMagics[8].Cast(targets[1].transform.position);
+                } break; // FireFire
+            // case 10: break; // FireIce
+            // case 14: break; // IceIce
         }
     }
 }
