@@ -4914,6 +4914,8 @@ GameObject:
   - component: {fileID: 9094896269969779576}
   - component: {fileID: 6523699520211762466}
   - component: {fileID: 3302016639579636937}
+  - component: {fileID: -286071528852318993}
+  - component: {fileID: 1401965530618975498}
   m_Layer: 0
   m_Name: Snow hit
   m_TagString: Untagged
@@ -9810,6 +9812,41 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &-286071528852318993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924508274929071776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
+  damage: 50
+  attackType: ImmediateMagic
+--- !u!135 &1401965530618975498
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924508274929071776}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.262404
+  m_Center: {x: -0.14139175, y: -0.0012578964, z: -0.14923191}
 --- !u!1 &5249445469998048360
 GameObject:
   m_ObjectHideFlags: 0
