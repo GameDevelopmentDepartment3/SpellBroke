@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 6848921922545638514}
   - component: {fileID: 5270179638036996581}
   - component: {fileID: 3125392555839510379}
+  - component: {fileID: -4613338456125638507}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Enemy
@@ -437,6 +438,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHP: 100
   EnemyName: Ghost
+--- !u!114 &-4613338456125638507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431304699381385800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b05d9a418c4454b2c829a40fc7321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  damage: 10
 --- !u!1 &5738598203429167148
 GameObject:
   m_ObjectHideFlags: 0
