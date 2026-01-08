@@ -58,6 +58,7 @@ public class MagicManager : MonoBehaviour
     private void Casting()
     {
         int w = 0;
+        Vector3 target = Vector3.zero;
         for (int i = 0; i < 2; i++)
         {
             if (elements.Count > 0) w += elements.Dequeue();
@@ -65,10 +66,8 @@ public class MagicManager : MonoBehaviour
         if (detector.GetClosestEnemy() != null)
         {
             Debug.Log($"{detector.GetClosestEnemy().name}");
-            targets[0].transform.position = detector.GetClosestEnemy().position;
+            target = detector.GetClosestEnemy().position + (Vector3.up * 3);
         }
-        else
-            targets[0].transform.position = targets[1].transform.position + new Vector3(0,1,0);
         switch (w)
         {
             case 1:
@@ -77,7 +76,14 @@ public class MagicManager : MonoBehaviour
                 } break; // Elec
             case 3:
                 {
-                    myMagics[1].Cast(targets[0].transform.position);
+                    if (target == Vector3.zero)
+                    {
+                        myMagics[1].Cast(targets[0].transform.position);
+                    }
+                    else
+                    {
+                        myMagics[1].Cast(target);
+                    }
                 } break; // Fire
             case 7:
                 {

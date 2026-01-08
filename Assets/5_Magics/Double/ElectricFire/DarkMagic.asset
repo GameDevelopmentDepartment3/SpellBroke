@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SimpleMagicSO
   magicName: DarkMagic
   effectPrefab: {fileID: 7131401307255788800, guid: 3e3732d4ca0ae4df5a98bc728165dfbc, type: 3}
-  duration: 1
+  duration: 3
