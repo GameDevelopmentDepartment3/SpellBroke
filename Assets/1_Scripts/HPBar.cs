@@ -18,14 +18,6 @@ public class HPBar : MonoBehaviour
         UpdateHP();
     }
 
-    void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            TakeDamage(10f);
-        }
-    }
-
     public void TakeDamage(float damage)
     {
         if (isDead) return;
@@ -37,7 +29,10 @@ public class HPBar : MonoBehaviour
 
     private void UpdateHP()
     {
-        fillImage.fillAmount = currentHP / maxHP;
+        float ratio = currentHP / maxHP;
+        Debug.Log($"HP: {currentHP} / {maxHP} = {ratio}");
+
+        fillImage.fillAmount = ratio;
 
         if (currentHP <= 0 && !isDead)
         {
