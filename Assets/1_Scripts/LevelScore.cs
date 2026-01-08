@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class LevelScore : MonoBehaviour
 {
+    [SerializeField] private AugmentUI augmentUI;
     public static LevelScore instance;
-
+    
     public int level = 1;
     public float currentXp = 0f;
     public float maxXp = 100f;
@@ -35,13 +36,13 @@ public class LevelScore : MonoBehaviour
         xpBar.UpdateUI(currentXp, maxXp, level);
     }
 
-    private void LevelUp()
+    void LevelUp()
     {
-        currentXp -= maxXp;
         level++;
-
+        currentXp -= maxXp;
         maxXp = maxXp * 3f / 2f;
 
         Debug.Log($"레벨업! Lv.{level}");
+        augmentUI.Open();
     }
 }
