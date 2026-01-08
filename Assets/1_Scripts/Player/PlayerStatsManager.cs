@@ -1,16 +1,26 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerStatsManager : MonoBehaviour
 {
-    public float power;
-    void Start()
+    public float maxHP = 100f;
+    public float attack = 10f;
+    public float moveSpeed = 5f;
+
+    public void AddHP(float value)
     {
-        
+        maxHP += value;
+        Debug.Log($"체력 증가: {maxHP}");
     }
 
-    void Update()
+    public void AddAttack(float value)
     {
-        
+        attack += value;
+        Debug.Log($"공격력 증가: {attack}");
+    }
+
+    public void AddSpeed(float value)
+    {
+        moveSpeed += value;
+        Debug.Log($"이속 증가: {moveSpeed}");
     }
 }
