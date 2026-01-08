@@ -6,9 +6,11 @@ public class MagicManager : MonoBehaviour
     // 인스펙터에서 MagicData(SimpleMagicSO 또는 CompositeMagicSO)를 드래그 앤 드롭 가능
     public List<MagicData> myMagics;
     public GameObject[] targets;
+    public GameObject testTarget;
+    public TargetDetector detector;
     
     private PlayerControls _controls;
-    private Queue<int> elements = new(); // electricity: 1, fire: 3, ice: 5
+    private Queue<int> elements = new(); // electricity: 1, fire: 3, ice: 7
 
     void Awake()
     {
@@ -61,7 +63,14 @@ public class MagicManager : MonoBehaviour
         {
             if (elements.Count > 0) w += elements.Dequeue();
         }
-
+        Vector3 target;
+        if (detector.GetClosestEnemy() != null)
+        {
+            Debug.Log($"{detector.GetClosestEnemy().name}");
+            target = detector.GetClosestEnemy().position;
+        }
+        else
+            target = testTarget.transform.position;
         switch (w)
         {
             case 1:
