@@ -28,6 +28,6 @@ public class AugmentButton : MonoBehaviour
                 player.AddSpeed(11000f);
                 break; 
         }
-        augmentUI.Close(); // 선택 후 닫기
+        augmentUI.Close();
     }
 }
