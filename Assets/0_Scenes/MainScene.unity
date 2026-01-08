@@ -881,7 +881,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 944fb2bcae6ae5f458cde0f853f59f7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8f975326b1f7184caa1edd29931cbca, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4324,6 +4324,8 @@ MonoBehaviour:
   targets:
   - {fileID: 1996752157}
   - {fileID: 24338824}
+  testTarget: {fileID: 1996752157}
+  detector: {fileID: 697924533}
 --- !u!4 &1238170929
 Transform:
   m_ObjectHideFlags: 0
