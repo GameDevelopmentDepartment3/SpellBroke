@@ -2,6 +2,18 @@ using UnityEngine;
 
 public class PlayerStatsManager : MonoBehaviour
 {
+    static public PlayerStatsManager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     public float maxHP = 100f;
     public float attack = 10f;
     public float moveSpeed = 5f;

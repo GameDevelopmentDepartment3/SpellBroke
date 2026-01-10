@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   playerTarget: {fileID: 327529575}
-  mouseSensitivity: 1
+  mouseSensitivity: 0.07
   distanceFromPlayer: 30
   minDistance: 1
   smoothTime: 0.02
