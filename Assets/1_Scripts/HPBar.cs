@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 
 public class HPBar : MonoBehaviour
 {
+    private float beforeMaxHp = 100f;
     [SerializeField] private Image fillImage;
-    [SerializeField] private float maxHP = 100f;
+    [SerializeField] public float maxHP = 100f;
     [SerializeField] private DeathUI deathUI;
     [SerializeField] private HitEffect hitEffect;
 
@@ -17,7 +18,10 @@ public class HPBar : MonoBehaviour
         currentHP = maxHP;
         UpdateHP();
     }
-
+    private void Update()
+    {
+        maxHP = PlayerStatsManager.instance.maxHP;
+    }
     public void TakeDamage(float damage)
     {
         if (isDead) return;
