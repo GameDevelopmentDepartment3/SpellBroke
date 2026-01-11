@@ -1125,6 +1125,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176257042}
   m_CullTransparentMesh: 1
+--- !u!1 &199041359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199041360}
+  m_Layer: 0
+  m_Name: magicTarget3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199041360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199041359}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634810358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214919654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,6 +5147,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
       addedObject: {fileID: 24338825}
+    - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 199041360}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
@@ -5330,9 +5364,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b136a1f6bb7c4793be02d0ac50f120d, type: 2}
   - {fileID: 11400000, guid: ef287ee63f3cb41e796baab77e992bc7, type: 2}
   - {fileID: 11400000, guid: 1888601e9ae154deba6979b83bc73fd6, type: 2}
+  - {fileID: 11400000, guid: 7e9bd9e27ff1d4b85b0a075941f0bb18, type: 2}
+  - {fileID: 11400000, guid: f8875258d43f5405fa0103705c030466, type: 2}
   targets:
   - {fileID: 1996752157}
   - {fileID: 24338824}
+  - {fileID: 199041359}
   detector: {fileID: 697924533}
 --- !u!4 &1238170929
 Transform:

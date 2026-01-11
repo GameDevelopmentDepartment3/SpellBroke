@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Net;
 
 public class MagicManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class MagicManager : MonoBehaviour
     public TargetDetector detector;
     
     private PlayerControls _controls;
-    private Queue<int> elements = new(); // electricity: 1, fire: 3, ice: 7
+    private int firstSelect = 1; // electricity: 1, fire: 3, ice: 7
+    private int secondSelect = 0;
 
     void Awake()
     {
@@ -21,48 +23,51 @@ public class MagicManager : MonoBehaviour
 
     void Update()
     {
-        if (_controls.Player.Electricity.triggered)
+        if (!_controls.Player.SecondSelect.IsPressed())
         {
-            Debug.Log("E");
-            elements.Enqueue(1);
+            if (_controls.Player.Electricity.triggered)
+            {
+                firstSelect = 1;
+            }
+            else if (_controls.Player.Fire.triggered)
+            {
+                firstSelect = 3;
+            }
+            else if (_controls.Player.Ice.triggered)
+            {
+                firstSelect = 7;
+            }
+            if (_controls.Player.Casting.triggered)
+            {
+                Casting(1);
+            }
         }
-        else if (_controls.Player.Fire.triggered)
+        else
         {
-            Debug.Log("F");
-            elements.Enqueue(3);
-        }
-        else if (_controls.Player.Ice.triggered)
-        {
-            Debug.Log("I");
-            elements.Enqueue(7);
-        }
-        if (elements.Count > 2)
-        {
-            elements.Dequeue();
-        }
-        if (_controls.Player.Casting.triggered)
-        {
-            Debug.Log("C");
-            Casting();
+            if (_controls.Player.Electricity.triggered)
+            {
+                secondSelect = 1;
+            }
+            else if (_controls.Player.Fire.triggered)
+            {
+                secondSelect = 3;
+            }
+            else if (_controls.Player.Ice.triggered)
+            {
+                secondSelect = 7;
+            }
+            if (_controls.Player.Casting.triggered)
+            {
+                Casting(2);
+            }
         }
     }
 
-    private void CastAll()
+    private void Casting(int type)
     {
-        foreach (var m in myMagics)
-        {
-            m.Cast(transform.position);
-        }
-    }
-
-    private void Casting()
-    {
-        int w = 0;
+        int w = firstSelect;
+        if (type == 2) w += secondSelect;
         Vector3 target = Vector3.zero;
-        for (int i = 0; i < 2; i++)
-        {
-            if (elements.Count > 0) w += elements.Dequeue();
-        }
         if (detector.GetClosestEnemy() != null)
         {
             Debug.Log($"{detector.GetClosestEnemy().name}");
@@ -107,8 +112,14 @@ public class MagicManager : MonoBehaviour
                 {
                     myMagics[8].Cast(targets[1].transform.position);
                 } break; // FireFire
-            // case 10: break; // FireIce
-            // case 14: break; // IceIce
+            case 10:
+                {
+                    myMagics[9].Cast(targets[2].transform.position);
+                } break; // FireIce
+            case 14:
+                {
+                    myMagics[10].Cast(targets[2].transform.position);
+                } break; // IceIce
         }
     }
 }
