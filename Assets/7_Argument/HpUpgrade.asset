@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaba0160665601848b4d9e162f82a6d5, type: 3}
+  m_Name: HpUpgrade
+  m_EditorClassIdentifier: Assembly-CSharp::OneStatUpgrade
+  upgradeName: "\uCCB4\uB825\uC99D\uAC00"
+  description: "\uCD5C\uB300\uCCB4\uB825\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4 "
+  icon: {fileID: 21300000, guid: b7fe80fa6f21e0c419dce02e1c1da4f7, type: 3}
+  levelRequirement: 1
+  typeOfUpgrade: 0
+  upgradeType: 0
+  value: 20

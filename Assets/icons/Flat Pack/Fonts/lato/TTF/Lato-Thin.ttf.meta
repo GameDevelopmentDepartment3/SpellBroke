@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: d46ef5fd22e3a09489525aeb8e563477
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lato
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 307236
+  packageName: Flat pack - GUI
+  packageVersion: 1.13
+  assetPath: Assets/CorePro/Flat Pack/Fonts/lato/TTF/Lato-Thin.ttf
+  uploadId: 756531

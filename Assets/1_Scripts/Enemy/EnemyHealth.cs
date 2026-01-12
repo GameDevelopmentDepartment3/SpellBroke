@@ -29,7 +29,11 @@ public class EnemyHealth : MonoBehaviour
     {
         childObject = this.gameObject.transform.GetChild(1).gameObject;
     }
-    void OnEnable() => Hp = maxHP;
+    void OnEnable()
+    {
+        this.childObject.GetComponent<Renderer>().material.color = Color.white;
+        Hp = maxHP;
+    }
     void Start()
     {
         Hp = maxHP;

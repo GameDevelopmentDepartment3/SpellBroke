@@ -1,19 +1,30 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "UpgradeData", menuName = "Scriptable Objects/UpgradeData")]
-public class UpgradeData : ScriptableObject
+//[CreateAssetMenu(fileName = "UpgradeData", menuName = "Scriptable Objects/UpgradeData")]
+public abstract class UpgradeData : ScriptableObject
 {
     public string upgradeName;
     [TextArea]
     public string description;
     public Sprite icon;
-    
+    public int levelRequirement;
     public enum UpgradeType
     {
-        HP,
-        Attack,
-        Speed
+        StatUp,
+        Fire,
+        Ice,
+        Electric
     }
-    public UpgradeType upgradeType;
-    public float value;
+    public UpgradeType typeOfUpgrade;
+
+    //public enum UpgradeType
+    //{
+    //    HP,
+    //    Attack,
+    //    Speed,
+    //    Magic
+    //}
+    //public UpgradeType upgradeType;
+    //public float value;
+    public abstract void ApplyUpgrade(GameObject magic);
 }
