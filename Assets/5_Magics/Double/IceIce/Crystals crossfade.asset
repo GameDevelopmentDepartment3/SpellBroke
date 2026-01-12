@@ -15,3 +15,4 @@ MonoBehaviour:
   magicName: Crystals crossfade
   effectPrefab: {fileID: 176822597162087251, guid: 35e6546a5684d4c4b8ce0f4aa09e7f90, type: 3}
   duration: 2
+  scale: 1

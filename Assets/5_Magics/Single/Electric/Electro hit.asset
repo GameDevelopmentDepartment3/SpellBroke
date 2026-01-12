@@ -15,3 +15,4 @@ MonoBehaviour:
   magicName: Electro hit
   effectPrefab: {fileID: 2965222256817593503, guid: 7f57e8d10311547749767881a5a56842, type: 3}
   duration: 1
+  scale: 1
