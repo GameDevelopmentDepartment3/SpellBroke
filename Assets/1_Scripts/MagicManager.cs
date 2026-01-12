@@ -1,13 +1,23 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using System.Net;
 
 public class MagicManager : MonoBehaviour
 {
+    [Header("Magics")]
     // 인스펙터에서 MagicData(SimpleMagicSO 또는 CompositeMagicSO)를 드래그 앤 드롭 가능
     public List<MagicData> myMagics;
     public GameObject[] targets;
     public TargetDetector detector;
+
+    [Header("UI Settings")]
+    // 인스펙터에서 전기(0), 불(1), 얼음(2) 순서대로 Image를 넣어주세요.
+    public Image[] uiIcons; 
+    public Color defaultColor = new Color(0, 0, 0, 0);
+    public Color firstColor = new Color(137, 209, 137);
+    public Color secondColor = new Color(245, 233, 54);
+    public Color combinedColor = new Color(231, 144, 14); // 초록+노랑이 겹칠 때 색상 (주황색 예시)
     
     private PlayerControls _controls;
     private int firstSelect = 1; // electricity: 1, fire: 3, ice: 7
@@ -25,43 +35,54 @@ public class MagicManager : MonoBehaviour
     {
         if (!_controls.Player.SecondSelect.IsPressed())
         {
-            if (_controls.Player.Electricity.triggered)
-            {
-                firstSelect = 1;
-            }
-            else if (_controls.Player.Fire.triggered)
-            {
-                firstSelect = 3;
-            }
-            else if (_controls.Player.Ice.triggered)
-            {
-                firstSelect = 7;
-            }
-            if (_controls.Player.Casting.triggered)
-            {
-                Casting(1);
-            }
+            if (_controls.Player.Electricity.triggered) firstSelect = 1;
+            else if (_controls.Player.Fire.triggered) firstSelect = 3;
+            else if (_controls.Player.Ice.triggered) firstSelect = 7;
+
+            if (_controls.Player.Casting.triggered) Casting(1);
         }
         else
         {
-            if (_controls.Player.Electricity.triggered)
-            {
-                secondSelect = 1;
-            }
-            else if (_controls.Player.Fire.triggered)
-            {
-                secondSelect = 3;
-            }
-            else if (_controls.Player.Ice.triggered)
-            {
-                secondSelect = 7;
-            }
-            if (_controls.Player.Casting.triggered)
-            {
-                Casting(2);
-            }
+            if (_controls.Player.Electricity.triggered) secondSelect = 1;
+            else if (_controls.Player.Fire.triggered) secondSelect = 3;
+            else if (_controls.Player.Ice.triggered) secondSelect = 7;
+
+            if (_controls.Player.Casting.triggered) Casting(2);
+        }
+
+        UpdateUI(); // 입력이 없더라도 매 프레임 UI 상태를 갱신합니다.
+    }
+
+    private void UpdateUI()
+    {
+        // 1: 전기, 3: 불, 7: 얼음 인덱스 매핑
+        int firstIdx = GetIndexFromValue(firstSelect);
+        int secondIdx = GetIndexFromValue(secondSelect);
+
+        for (int i = 0; i < uiIcons.Length; i++)
+        {
+            bool isFirst = (i == firstIdx);
+            bool isSecond = (i == secondIdx);
+
+            if (isFirst && isSecond)
+                uiIcons[i].color = combinedColor; // 두 선택이 겹칠 때
+            else if (isFirst)
+                uiIcons[i].color = firstColor;    // 초록색
+            else if (isSecond)
+                uiIcons[i].color = secondColor;   // 노란색
+            else
+                uiIcons[i].color = defaultColor;  // 기본 투명
         }
     }
+
+    private int GetIndexFromValue(int value)
+    {
+        if (value == 1) return 0; // Elec
+        if (value == 3) return 1; // Fire
+        if (value == 7) return 2; // Ice
+        return -1;
+    }
+
 
     private void Casting(int type)
     {
