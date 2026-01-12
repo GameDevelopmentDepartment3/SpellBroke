@@ -15,9 +15,9 @@ public class MagicManager : MonoBehaviour
     // 인스펙터에서 전기(0), 불(1), 얼음(2) 순서대로 Image를 넣어주세요.
     public Image[] uiIcons; 
     public Color defaultColor = new Color(0, 0, 0, 0);
-    public Color firstColor = Color.green;
-    public Color secondColor = Color.yellow;
-    public Color combinedColor = new Color(1f, 0.5f, 0f); // 초록+노랑이 겹칠 때 색상 (주황색 예시)
+    public Color firstColor = new Color(137, 209, 137);
+    public Color secondColor = new Color(245, 233, 54);
+    public Color combinedColor = new Color(231, 144, 14); // 초록+노랑이 겹칠 때 색상 (주황색 예시)
     
     private PlayerControls _controls;
     private int firstSelect = 1; // electricity: 1, fire: 3, ice: 7
