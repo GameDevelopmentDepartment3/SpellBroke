@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ecbbc80ce7a25bc4ba6434de15a51829
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 307236
+  packageName: Flat pack - GUI
+  packageVersion: 1.13
+  assetPath: Assets/CorePro/Flat Pack/Shapes/r=round t=transparent s=stroke.txt
+  uploadId: 756531

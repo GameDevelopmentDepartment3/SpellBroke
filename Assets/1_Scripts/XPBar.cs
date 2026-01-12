@@ -14,6 +14,4 @@ public class XPBar : MonoBehaviour
         fillImage.fillAmount = currentXp / maxXp;
         levelText.text = level.ToString();
     }
-
-    
 }

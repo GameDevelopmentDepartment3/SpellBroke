@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LevelScore : MonoBehaviour
 {
@@ -22,6 +23,13 @@ public class LevelScore : MonoBehaviour
     void Start()
     {
         xpBar.UpdateUI(currentXp, maxXp, level);
+    }
+    private void Update()
+    {
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            LevelUp();
+        }
     }
 
     public void AddXp(float amount)
