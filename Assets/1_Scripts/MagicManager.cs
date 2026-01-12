@@ -20,8 +20,8 @@ public class MagicManager : MonoBehaviour
     public Color combinedColor = new Color(231, 144, 14); // 초록+노랑이 겹칠 때 색상 (주황색 예시)
     
     private PlayerControls _controls;
-    private int firstSelect = 1; // electricity: 1, fire: 3, ice: 7
-    private int secondSelect = 0;
+    private int firstSelect = 3; // electricity: 1, fire: 3, ice: 7
+    private int secondSelect = 3;
 
     void Awake()
     {
