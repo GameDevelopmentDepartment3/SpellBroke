@@ -22,7 +22,6 @@ public class FireAttack : MonoBehaviour
     private void Update()
     {
         burnRing.fillAmount = (float)currentBurnStack / maxBurnStack;
-        Debug.Log(currentBurnStack / maxBurnStack);
         if (currentBurnStack <= 0)
             Destroy(this.gameObject);
     }

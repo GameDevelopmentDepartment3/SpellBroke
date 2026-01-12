@@ -9826,9 +9826,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
   damage: 50
   attackType: ImmediateMagic
-  attackElement1: 
+  attackElement1: Ice
   attackElement2: 
   burn: {fileID: 0}
+  Ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
 --- !u!135 &1401965530618975498
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9844,7 +9845,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
