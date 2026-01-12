@@ -438,6 +438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHP: 100
   EnemyName: Ghost
+  childObject: {fileID: 0}
+  damagePopupPrefab: {fileID: 888564353169641620, guid: 963e45f736710451b9ea028e7ed44518, type: 3}
 --- !u!114 &-4613338456125638507
 MonoBehaviour:
   m_ObjectHideFlags: 0
