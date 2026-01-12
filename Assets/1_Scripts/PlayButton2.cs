@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PlayButton : MonoBehaviour
+public class PlayButton2 : MonoBehaviour
 {
     public Button targetButton;
 
@@ -16,7 +16,7 @@ public class PlayButton : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }

@@ -4919,7 +4919,7 @@ GameObject:
   - component: {fileID: -8868785752012484574}
   m_Layer: 0
   m_Name: Electro hit
-  m_TagString: Untagged
+  m_TagString: Magic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9874,7 +9874,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
   damage: 50
   attackType: ImmediateMagic
-  attackElement: Electic
+  attackElement1: Electric
+  attackElement2: Electric
+  burn: {fileID: 0}
 --- !u!135 &4011405699773901068
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9908,8 +9910,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef9a65894d8cb84eb63e03a9ac03771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElectricAttack
-  chainRadius: 15
-  maxChainCounts: 4
+  chainRadius: 10000
+  maxChainCounts: 100
   currentCounts: 0
   hitEnemies: []
   electricEffectPrefab: {fileID: 2965222256817593503}

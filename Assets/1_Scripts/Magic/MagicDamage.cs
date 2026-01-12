@@ -4,7 +4,10 @@ public class MagicDamage : MonoBehaviour
 {
     public float damage;
     public string attackType;
-    public string attackElement;
+    public string attackElement1;
+    public string attackElement2;
+    public GameObject burn;
+    public GameObject Ice;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -38,10 +41,35 @@ public class MagicDamage : MonoBehaviour
     }
     protected virtual void ElementAttack(Collider other)
     {
-        if(attackElement == "Electic")
+        if(attackElement1 == "Electric")
         {
             this.gameObject.GetComponent<ElectricAttack>().enabled = true;
             this.gameObject.GetComponent<ElectricAttack>().hitEnemies.Add(other.gameObject.transform);
+        }
+        if(attackElement1 == "Fire")
+        {
+            foreach(Transform child in other.transform)
+            {
+                if (child.GetComponent<FireAttack>() != null)
+                {
+                    child.GetComponent<FireAttack>().currentBurnStack++;
+                    return;
+                }
+            }
+            var fireEffect = Instantiate(burn, other.transform);
+            Destroy(this.gameObject.GetComponent<Collider>());
+        }
+        if(attackElement1 == "Ice"){
+            foreach(Transform child in other.transform)
+            {
+                if (child.GetComponent<IceAttack>() != null)
+                {
+                    child.GetComponent<IceAttack>().currentIceStack++;
+                    return;
+                }
+            }
+            var iceEffect = Instantiate(Ice, other.transform);
+            Destroy(this.gameObject.GetComponent<Collider>());
         }
     }
 }
