@@ -7,6 +7,7 @@ public class MagicDamage : MonoBehaviour
     public string attackElement1;
     public string attackElement2;
     public GameObject burn;
+    public GameObject Ice;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -56,7 +57,19 @@ public class MagicDamage : MonoBehaviour
                 }
             }
             var fireEffect = Instantiate(burn, other.transform);
+            Destroy(this.gameObject.GetComponent<Collider>());
         }
-        Destroy(this.gameObject.GetComponent<Collider>());
+        if(attackElement1 == "Ice"){
+            foreach(Transform child in other.transform)
+            {
+                if (child.GetComponent<IceAttack>() != null)
+                {
+                    child.GetComponent<IceAttack>().currentIceStack++;
+                    return;
+                }
+            }
+            var iceEffect = Instantiate(Ice, other.transform);
+            Destroy(this.gameObject.GetComponent<Collider>());
+        }
     }
 }
