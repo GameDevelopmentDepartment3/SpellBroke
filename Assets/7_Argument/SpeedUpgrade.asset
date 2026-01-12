@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: "\uC774\uB3D9\uC18D\uB3C4 \uC99D\uAC00"
   description: "\uC774\uB3D9\uC18D\uB3C4\uAC00  \uC99D\uAC00\uD569\uB2C8\uB2E4 "
   icon: {fileID: 21300000, guid: d1e1df7e625d6da43be3d0e1b82011ce, type: 3}
-  levelRequirement: 1
+  levelRequirement: 2
   typeOfUpgrade: 0
   upgradeType: 2
   value: 5
