@@ -1,11 +1,43 @@
 using UnityEngine;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class AugmentUI : MonoBehaviour
 {
     [SerializeField] private GameObject augmentPanel;
+    public List<GameObject> magics;
+    public List<UpgradeData> allUpgrades;
+    public List<AugmentButton> upgradeCards;
+    public int curLevel = 0;
+
 
     public void Open()
     {
+        List<UpgradeData> curLevelUpgrades = new List<UpgradeData>();
+        foreach (UpgradeData upgrade in allUpgrades)
+        {
+            if (upgrade.levelRequirement == curLevel)
+                curLevelUpgrades.Add(upgrade);
+        }
+        if(upgradeCards.Count < curLevelUpgrades.Count)
+        {
+            Debug.LogError("그 레벨의 증강의 개수가 부족합니다.");
+            return;
+        }
+        for (int i = 0; i < upgradeCards.Count; i++)
+        {
+            //int randomIndex = Random.Range(0, curLevelUpgrades.Count);
+            UpgradeData selected = curLevelUpgrades[i];
+            foreach(GameObject magic in magics)
+            {
+                if (magic.name == selected.typeOfUpgrade.ToString())
+                {
+                    upgradeCards[i].magic = magic;
+                }
+            }
+            upgradeCards[i].SetUp(selected);
+            //curLevelUpgrades.Remove(selected);
+        }
         Time.timeScale = 0f;          // 게임 정지
         augmentPanel.SetActive(true);
     }

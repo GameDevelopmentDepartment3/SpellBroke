@@ -7,15 +7,18 @@ public class MagicDamage : MonoBehaviour
     public string attackElement;
     private void OnTriggerEnter(Collider other)
     {
-        damage = PlayerStatsManager.instance.attack;
-        switch (attackType)
+        if (other.CompareTag("Enemy"))
         {
-            case "ImmediateMagic":
-                ImmediatelyMagicAttack(other);
-                break;
-            case "OverTimeMagic":
-                OverTimeMagicAttack(other);
-                break;
+            damage = PlayerStatsManager.instance.attack;
+            switch (attackType)
+            {
+                case "ImmediateMagic":
+                    ImmediatelyMagicAttack(other);
+                    break;
+                case "OverTimeMagic":
+                    OverTimeMagicAttack(other);
+                    break;
+            }
         }
     }
     public void ImmediatelyMagicAttack(Collider other)

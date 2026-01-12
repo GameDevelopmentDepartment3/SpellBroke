@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 18d67155ef5724f4781c08482219c436
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lato
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 307236
+  packageName: Flat pack - GUI
+  packageVersion: 1.13
+  assetPath: Assets/CorePro/Flat Pack/Fonts/lato/TTF/Lato-Heavy.ttf
+  uploadId: 756531
