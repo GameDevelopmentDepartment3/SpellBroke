@@ -6,6 +6,7 @@ public class EnemyHealthScript : MonoBehaviour
     [SerializeField] private float maxHP = 100f;
     private float _currentHP;
     public string enemyName;
+    public GameObject damagePopupPrefab;
     public float Hp
     {
         get { return _currentHP; }
@@ -29,6 +30,10 @@ public class EnemyHealthScript : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        // 대미지 텍스트 생성 (적의 위치보다 조금 위쪽)
+        GameObject popup = Instantiate(damagePopupPrefab, transform.position + Vector3.up * 2f, Quaternion.identity);
+        // 데이터 전달
+        popup.GetComponent<DamagePopup>().Setup((int)damage);
         Hp -= damage;
     }
     private void Update()
