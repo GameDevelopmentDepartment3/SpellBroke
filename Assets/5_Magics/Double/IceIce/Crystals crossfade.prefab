@@ -118,7 +118,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 0
+  scalingMode: 1
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -990,7 +990,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 5
+        scalar: 5.36
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -19668,7 +19668,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1e-45, y: 2.7297318e+28, z: 1e-45, w: 1.1497948e-37}
+  m_BoundingSphereOverride: {x: 1e-45, y: 3.983707e+23, z: 1e-45, w: 1.1580671e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -30217,7 +30217,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0.3, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 2, y: 1, z: 2}
+    m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -30294,9 +30294,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0.1
+    randomPositionAmount: 0.01
     radius:
-      value: 0.01
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
