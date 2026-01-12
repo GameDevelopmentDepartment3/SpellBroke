@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        moveSpeed = PlayerStatsManager.instance.moveSpeed;
         // 1. 피직스 매터리얼 기반 땅 체크
         _isGrounded = CheckGroundWithMaterial();
         

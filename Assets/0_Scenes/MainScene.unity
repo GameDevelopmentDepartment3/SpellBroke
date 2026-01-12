@@ -1128,6 +1128,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176257042}
   m_CullTransparentMesh: 1
+--- !u!1 &199041359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199041360}
+  m_Layer: 0
+  m_Name: magicTarget3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199041360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199041359}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634810358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214919654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   playerTarget: {fileID: 327529575}
-  mouseSensitivity: 1
+  mouseSensitivity: 0.07
   distanceFromPlayer: 30
   minDistance: 1
   smoothTime: 0.02
@@ -5119,6 +5150,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
       addedObject: {fileID: 24338825}
+    - targetCorrespondingSourceObject: {fileID: 400066, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 199041360}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       insertIndex: -1
@@ -5333,9 +5367,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b136a1f6bb7c4793be02d0ac50f120d, type: 2}
   - {fileID: 11400000, guid: ef287ee63f3cb41e796baab77e992bc7, type: 2}
   - {fileID: 11400000, guid: 1888601e9ae154deba6979b83bc73fd6, type: 2}
+  - {fileID: 11400000, guid: 7e9bd9e27ff1d4b85b0a075941f0bb18, type: 2}
+  - {fileID: 11400000, guid: f8875258d43f5405fa0103705c030466, type: 2}
   targets:
   - {fileID: 1996752157}
   - {fileID: 24338824}
+  - {fileID: 199041359}
   detector: {fileID: 697924533}
 --- !u!4 &1238170929
 Transform:
@@ -5778,6 +5815,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408544992}
   m_CullTransparentMesh: 1
+--- !u!1 &1409036902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409036904}
+  - component: {fileID: 1409036903}
+  m_Layer: 0
+  m_Name: PlayerStatsManage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1409036903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409036902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9eae2e6b3a0c4d34a22469a97b9d3a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsManager
+  maxHP: 100
+  attack: 10
+  moveSpeed: 5
+--- !u!4 &1409036904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409036902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 563.39655, y: -0, z: 504.6515}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554847730
 GameObject:
   m_ObjectHideFlags: 0
@@ -7919,3 +8003,8 @@ SceneRoots:
   - {fileID: 1238170929}
   - {fileID: 2106316788}
   - {fileID: 348145461}
+<<<<<<< HEAD
+=======
+  - {fileID: 507639818}
+  - {fileID: 1409036904}
+>>>>>>> hyper
