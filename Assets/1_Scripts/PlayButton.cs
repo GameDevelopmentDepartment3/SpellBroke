@@ -14,7 +14,7 @@ public class PlayButton : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             SceneManager.LoadScene(1);
         }
