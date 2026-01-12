@@ -9829,7 +9829,7 @@ MonoBehaviour:
   attackElement1: Ice
   attackElement2: 
   burn: {fileID: 0}
-  Ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
+  ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
 --- !u!135 &1401965530618975498
 SphereCollider:
   m_ObjectHideFlags: 0
