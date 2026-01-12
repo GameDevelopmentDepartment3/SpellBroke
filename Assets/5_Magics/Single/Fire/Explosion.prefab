@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4026772950504505629}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Magic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4941,8 +4941,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
-  damage: 50
+  damage: 20
   attackType: ImmediateMagic
+  attackElement1: Fire
+  attackElement2: 
+  burn: {fileID: 7905298493108305087, guid: 686b44e8a7aa67a42abee39f38f28649, type: 3}
 --- !u!1 &5084589283769131857
 GameObject:
   m_ObjectHideFlags: 0

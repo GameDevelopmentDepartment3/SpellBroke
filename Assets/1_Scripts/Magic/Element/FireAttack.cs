@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,18 +15,25 @@ public class FireAttack : MonoBehaviour
     {
         StartCoroutine(Burn());
     }
-
+    private void OnDisable()
+    {
+        Destroy(this.gameObject);
+    }
     private void Update()
     {
-        burnRing.fillAmount = currentBurnStack / maxBurnStack;
+        burnRing.fillAmount = (float)currentBurnStack / maxBurnStack;
+        Debug.Log(currentBurnStack / maxBurnStack);
         if (currentBurnStack <= 0)
             Destroy(this.gameObject);
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Fire"))
+        if (other.CompareTag("Magic"))
         {
-            currentBurnStack++;
+            var type1 = other.GetComponent<MagicDamage>().attackElement1;
+            var type2 = other.GetComponent<MagicDamage>().attackElement2;
+            //if(type1 == "Fire" || type2 == "Fire")
+                //currentBurnStack++;
         }
     }
     IEnumerator Burn()
@@ -39,17 +45,18 @@ public class FireAttack : MonoBehaviour
             burnDuration -= 1f;
             if (burnDuration <= 0f)
             {
-                currentBurnStack = 0;
+                currentBurnStack -= 1;
+                burnDuration = 3f;
             }
         }
     }
     IEnumerator Burndamage()
     {
-        var Enemy = transform.parent.GetComponent<EnemyHealth>();
+        var Enemy = this.gameObject.transform.parent.GetComponent<EnemyHealth>();
         for (int i = 0; i < currentBurnStack; i++)
             Enemy.TakeDamage(burnDamagePerSecond);
-        Enemy.childObject.GetComponent<Material>().color = Color.red;
+        Enemy.childObject.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(1f);
-        Enemy.childObject.GetComponent<Material>().color = Color.white;
+        Enemy.childObject.GetComponent<Renderer>().material.color = Color.white;
     }
 }
