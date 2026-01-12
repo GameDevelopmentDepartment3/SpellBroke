@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb840402c335114394021a5e4b0eadc, type: 3}
   m_Name: BasicIceMagicUpgrade
   m_EditorClassIdentifier: Assembly-CSharp::BasicIceMagicUpgrade
-  upgradeName: "[\uC804\uC9C1]\uC5BC\uC74C\uC220\uC0AC"
+  upgradeName: "[\uC804\uC9C1]\\n\uC5BC\uC74C\uC220\uC0AC"
   description: "\uC5BC\uC74C\uC220\uC0AC\uB85C \uC804\uC9C1\uD569\uB2C8\uB2E4"
   icon: {fileID: 21300000, guid: e8dc4db97e601574292712296f55eafa, type: 3}
   levelRequirement: 1
