@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78958f09c4024be4c801b75a6b7fea91, type: 3}
+  m_Name: BasicElectricMagicUpgrade
+  m_EditorClassIdentifier: Assembly-CSharp::BasicElectricMagicUpgrade
+  upgradeName: "[\uC804\uC9C1]\uBC88\uAC1C\uC220\uC0AC"
+  description: "\uBC88\uAC1C\uC220\uC0AC\uB85C \uC804\uC9C1\uD569\uB2C8\uB2E4"
+  icon: {fileID: 21300000, guid: a29c87284a8bad1439708d9249c3666a, type: 3}
+  levelRequirement: 1
+  typeOfUpgrade: 3
+  increasingChainRadius: 5
+  increasingMaxChainCounts: 1

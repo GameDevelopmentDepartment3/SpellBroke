@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 public class AugmentUI : MonoBehaviour
 {
     [SerializeField] private GameObject augmentPanel;
-    public List<GameObject> magics;
+    public List<MagicDamage> magics;
     public List<UpgradeData> allUpgrades;
     public List<AugmentButton> upgradeCards;
     public int curLevel = 0;
@@ -28,11 +28,24 @@ public class AugmentUI : MonoBehaviour
         {
             //int randomIndex = Random.Range(0, curLevelUpgrades.Count);
             UpgradeData selected = curLevelUpgrades[i];
-            foreach(GameObject magic in magics)
+            foreach(MagicDamage magic in magics)
             {
-                if (magic.name == selected.typeOfUpgrade.ToString())
+                string fir = magic.attackElement1;
+                string sec = magic.attackElement2;
+                if (fir == selected.typeOfUpgrade.ToString() || sec == selected.typeOfUpgrade.ToString())
                 {
-                    upgradeCards[i].magic = magic;
+                    switch(selected.typeOfUpgrade.ToString())
+                    {
+                        case "Fire":
+                            upgradeCards[i].magic = magic.burn;
+                            break;
+                        case "Ice":
+                            upgradeCards[i].magic = magic.ice;
+                            break;
+                        case "Electric":
+                            upgradeCards[i].magic = magic.gameObject;
+                            break;
+                    }
                 }
             }
             upgradeCards[i].SetUp(selected);
