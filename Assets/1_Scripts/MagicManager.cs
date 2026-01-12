@@ -77,48 +77,48 @@ public class MagicManager : MonoBehaviour
         {
             case 1:
                 {
-                    myMagics[0].Cast(targets[0].transform.position);
+                    myMagics[0].Cast(targets[0].transform.position, Quaternion.identity);
                 } break; // Elec
             case 3:
                 {
                     if (target == Vector3.zero)
                     {
-                        myMagics[1].Cast(targets[0].transform.position);
+                        myMagics[1].Cast(targets[0].transform.position, Quaternion.identity);
                     }
                     else
                     {
-                        myMagics[1].Cast(target);
+                        myMagics[1].Cast(target, Quaternion.identity);
                     }
                 } break; // Fire
             case 7:
                 {
-                    myMagics[2].Cast(targets[0].transform.position);
+                    myMagics[2].Cast(targets[0].transform.position, Quaternion.identity);
                 } break; // Ice
             case 2:
                 {
-                    myMagics[3].Cast(targets[1].transform.position);
-                    myMagics[4].Cast(targets[1].transform.position);
+                    myMagics[3].Cast(targets[1].transform.position, Quaternion.identity);
+                    myMagics[4].Cast(targets[1].transform.position, Quaternion.identity);
                 } break; // ElecElec
             case 4:
                 {
-                    myMagics[5].Cast(targets[0].transform.position);
+                    myMagics[5].Cast(targets[0].transform.position, Quaternion.identity);
                 } break; // ElecFire
             case 8:
                 {
-                    myMagics[6].Cast(targets[0].transform.position);
-                    myMagics[7].Cast(targets[0].transform.position);
+                    myMagics[6].Cast(targets[0].transform.position, Quaternion.identity);
+                    myMagics[7].Cast(targets[0].transform.position, Quaternion.identity);
                 } break; // ElecIce
             case 6:
                 {
-                    myMagics[8].Cast(targets[1].transform.position);
+                    myMagics[8].Cast(targets[1].transform.position, Quaternion.identity);
                 } break; // FireFire
             case 10:
                 {
-                    myMagics[9].Cast(targets[2].transform.position);
+                    myMagics[9].Cast(targets[2].transform.position, targets[2].transform.rotation);
                 } break; // FireIce
             case 14:
                 {
-                    myMagics[10].Cast(targets[2].transform.position);
+                    myMagics[10].Cast(targets[2].transform.position, Quaternion.identity);
                 } break; // IceIce
         }
     }

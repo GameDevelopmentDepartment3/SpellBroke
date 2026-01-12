@@ -19668,7 +19668,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 876.8, y: 1, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1e-45, y: 2.7297318e+28, z: 1e-45, w: 1.1497948e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -29832,8 +29832,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 1.5
+      scalar: 2.5
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -30217,7 +30217,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0.3, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 2, y: 1, z: 2}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -30294,7 +30294,7 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0.3
+    randomPositionAmount: 0.1
     radius:
       value: 0.01
       mode: 0
@@ -30525,7 +30525,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 1
+        scalar: 1.3
         minScalar: 30
         maxCurve:
           serializedVersion: 2

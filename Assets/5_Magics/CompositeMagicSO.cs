@@ -7,11 +7,11 @@ public class CompositeMagicSO : MagicData
     public List<MagicData> subMagics; // 다른 마법 데이터들을 리스트로 가짐
     public override string Name => magicName;
 
-    public override int Cast(Vector3 position)
+    public override int Cast(Vector3 position, Quaternion rotation)
     {
         foreach (var magic in subMagics)
         {
-            magic.Cast(position);
+            magic.Cast(position, rotation);
         }
 
         return 0;
