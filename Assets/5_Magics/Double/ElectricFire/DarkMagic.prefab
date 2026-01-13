@@ -9760,6 +9760,7 @@ GameObject:
   - component: {fileID: 6469354921825657977}
   - component: {fileID: 5744350271466584198}
   - component: {fileID: -5353709187138688728}
+  - component: {fileID: 4175873101686782378}
   m_Layer: 0
   m_Name: DarkMagic
   m_TagString: Untagged
@@ -14614,3 +14615,24 @@ MonoBehaviour:
   attackElement2: Fire
   burn: {fileID: 7905298493108305087, guid: 686b44e8a7aa67a42abee39f38f28649, type: 3}
   ice: {fileID: 0}
+--- !u!135 &4175873101686782378
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131401307255788800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.66
+  m_Center: {x: 0, y: 1, z: 0}
