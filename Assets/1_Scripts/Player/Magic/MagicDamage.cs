@@ -41,14 +41,14 @@ public class MagicDamage : MonoBehaviour
     }
     protected virtual void ElementAttack(Collider other)
     {
-        if(attackElement1 == "Electric")
+        if(attackElement1 == "Electric" || attackElement2 == "Electric")
         {
             this.gameObject.GetComponent<ElectricAttack>().enabled = true;
             this.gameObject.GetComponent<ElectricAttack>().hitEnemies.Add(other.gameObject.transform);
         }
-        if(attackElement1 == "Fire")
+        if(attackElement1 == "Fire" || attackElement2 == "Fire")
         {
-            foreach(Transform child in other.transform)
+            foreach (Transform child in other.transform)
             {
                 if (child.GetComponent<FireAttack>() != null)
                 {
@@ -57,9 +57,10 @@ public class MagicDamage : MonoBehaviour
                 }
             }
             var fireEffect = Instantiate(burn, other.transform);
+            fireEffect.transform.SetParent(other.transform);
             Destroy(this.gameObject.GetComponent<Collider>());
         }
-        if(attackElement1 == "Ice"){
+        if(attackElement1 == "Ice" || attackElement2 == "Ice"){
             foreach(Transform child in other.transform)
             {
                 if (child.GetComponent<IceAttack>() != null)
@@ -69,6 +70,7 @@ public class MagicDamage : MonoBehaviour
                 }
             }
             var iceEffect = Instantiate(ice, other.transform);
+            iceEffect.transform.SetParent(other.transform);
             Destroy(this.gameObject.GetComponent<Collider>());
         }
     }

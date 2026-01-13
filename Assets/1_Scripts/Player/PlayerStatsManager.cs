@@ -36,8 +36,8 @@ public class PlayerStatsManager : MonoBehaviour
     }
     public void LevelUp()
     {
-        maxHP *= 1.2f;
-        attack *= 1.2f;
-        moveSpeed *= 1.1f;
+        maxHP *= 1.1f;
+        attack *= 1.1f;
+        moveSpeed *= 1.05f;
     }
 }
