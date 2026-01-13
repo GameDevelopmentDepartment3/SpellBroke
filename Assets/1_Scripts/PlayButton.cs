@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
@@ -10,13 +9,11 @@ public class PlayButton : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
+        targetButton.onClick.AddListener(LoadScene);
     }
 
-    void Update()
+    void LoadScene()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(1);
-        }
+        SceneManager.LoadScene(1);
     }
 }
