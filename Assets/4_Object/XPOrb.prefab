@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::XPOrb
   xpAmount: 10
-  moveSpeed: 10
+  moveSpeed: 20
 --- !u!120 &3036305540657246004
 LineRenderer:
   serializedVersion: 3
