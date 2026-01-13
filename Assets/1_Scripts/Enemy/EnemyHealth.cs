@@ -1,13 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float maxHP = 100f;
     private float currentHP;
     public string EnemyName;
-    public GameObject childObject;
+    public List<GameObject> childObject = new List<GameObject>();
     public GameObject damagePopupPrefab;
     public float Hp
     {
@@ -28,12 +29,47 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Awake()
     {
-        childObject = this.gameObject.transform.GetChild(1).gameObject;
+        // 리스트가 null이라면 새로 생성
+        if (childObject == null) childObject = new List<GameObject>();
+        InitializeChildObjects();
+    }
+    private void InitializeChildObjects()
+    {
+        childObject.Clear();
+        // 1단계 자식뿐만 아니라 하위의 모든 자식에서 Renderer를 찾음 (더 안전함)
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer rend in renderers)
+        {
+            // 자기 자신은 제외하고 싶다면 조건 추가 가능
+            childObject.Add(rend.gameObject);
+        }
     }
     void OnEnable()
     {
-        this.childObject.GetComponent<Renderer>().material.color = Color.white;
+        // 풀링으로 재활성화될 때마다 리스트를 다시 점검하거나 색상을 초기화
+        if (childObject == null || childObject.Count == 0)
+        {
+            InitializeChildObjects();
+        }
+
+        ResetColor();
         Hp = maxHP;
+    }
+    private void ResetColor()
+    {
+        if (childObject == null) return;
+
+        for (int i = 0; i < childObject.Count; i++)
+        {
+            if (childObject[i] != null)
+            {
+                var renderer = childObject[i].GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material.color = Color.white;
+                }
+            }
+        }
     }
     void Start()
     {
@@ -66,9 +102,14 @@ public class EnemyHealth : MonoBehaviour
     }
     IEnumerator Hit()
     {
-        Color color = childObject.GetComponent<Renderer>().material.color;
-        this.childObject.GetComponent<Renderer>().material.color = new Color(1,0.1f,0.1f);
+        for (int i = 0; i < childObject.Count; i++)
+        {
+            childObject[i].GetComponent<Renderer>().material.color = new Color(1,0.1f,0);
+        }
         yield return new WaitForSeconds(0.1f);
-        this.childObject.GetComponent<Renderer>().material.color = Color.white;
+        for (int i = 0; i < childObject.Count; i++)
+        {
+            childObject[i].GetComponent<Renderer>().material.color = Color.white;
+        }
     }
 }
