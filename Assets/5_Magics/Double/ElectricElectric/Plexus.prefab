@@ -4858,7 +4858,6 @@ GameObject:
   - component: {fileID: 8949566398710770790}
   - component: {fileID: 2400466318854986903}
   - component: {fileID: 2442981283657224913}
-  - component: {fileID: -1648205516862336250}
   m_Layer: 0
   m_Name: Plexus
   m_TagString: Untagged
@@ -9685,21 +9684,3 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &-1648205516862336250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6063518424537689786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
-  damage: 5
-  attackType: OverTimeMagic
-  attackElement1: Electric
-  attackElement2: Electric
-  burn: {fileID: 0}
-  ice: {fileID: 0}

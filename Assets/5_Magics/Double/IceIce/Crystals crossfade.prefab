@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8729863298076563650}
   - component: {fileID: 1215030772492927087}
   - component: {fileID: 2113731745083094130}
+  - component: {fileID: -2640214997668104047}
+  - component: {fileID: 6233067939898293418}
   m_Layer: 0
   m_Name: Crystals crossfade
   m_TagString: Untagged
@@ -4904,6 +4906,47 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &-2640214997668104047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176822597162087251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
+  damage: 45
+  attackType: ImmediateMagic
+  attackElement1: Ice
+  attackElement2: Ice
+  burn: {fileID: 0}
+  ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
+--- !u!136 &6233067939898293418
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176822597162087251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.5
+  m_Height: 9
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &851939861782742427
 GameObject:
   m_ObjectHideFlags: 0
