@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 [CreateAssetMenu(menuName = "UpgradeData/BasicElectricMagicUpgrade")]
 public class BasicElectricMagicUpgrade : UpgradeData

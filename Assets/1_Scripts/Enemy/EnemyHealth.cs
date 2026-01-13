@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     private float currentHP;
     public string EnemyName;
     public GameObject childObject;
+    public GameObject damagePopupPrefab;
     public float Hp
     {
         get { return currentHP; }
@@ -47,6 +48,10 @@ public class EnemyHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        // 대미지 텍스트 생성 (적의 위치보다 조금 위쪽)
+        GameObject popup = Instantiate(damagePopupPrefab, transform.position + Vector3.up * 5f, Quaternion.identity);
+        // 데이터 전달
+        popup.GetComponent<DamagePopup>().Setup((int)damage);
         Hp -= damage;
         if (gameObject.activeInHierarchy)
         {
