@@ -17,7 +17,6 @@ public class PlayerStatsManager : MonoBehaviour
     public float maxHP = 100f;
     public float attack = 10f;
     public float moveSpeed = 5f;
-
     public void AddHP(float value)
     {
         maxHP += value;
@@ -34,5 +33,11 @@ public class PlayerStatsManager : MonoBehaviour
     {
         moveSpeed += value;
         Debug.Log($"이속 증가: {moveSpeed}");
+    }
+    public void LevelUp()
+    {
+        maxHP *= 1.2f;
+        attack *= 1.2f;
+        moveSpeed *= 1.1f;
     }
 }

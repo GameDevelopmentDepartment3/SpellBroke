@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bb840402c335114394021a5e4b0eadc, type: 3}
-  m_Name: BasicIceMagicUpgrade
+  m_Name: FifthIceMagicUpgrade1 4
   m_EditorClassIdentifier: Assembly-CSharp::BasicIceMagicUpgrade
-  upgradeName: "[\uC804\uC9C1]\\n\uC5BC\uC74C\uC220\uC0AC"
-  description: "\uC5BC\uC74C\uC220\uC0AC\uB85C \uC804\uC9C1\uD569\uB2C8\uB2E4"
+  upgradeName: "[\uAC15\uD654]\\n\uBE59\uACB0 \uB9C8\uBC95"
+  description: "\uBE59\uACB0\uAE4C\uC9C0 \uD544\uC694\uD55C \uC2A4\uD0DD \uC218 \uB300\uD3ED
+    \uAC10\uC18C,\n\uC2AC\uB85C\uC6B0 \uC218\uCE58 \uAC10\uC18C"
   icon: {fileID: 21300000, guid: e8dc4db97e601574292712296f55eafa, type: 3}
-  levelRequirement: 1
+  levelRequirement: 3
   typeOfUpgrade: 2
-  decreasingStunStack: 1
-  increasingslowAmount: 0.1
+  decreasingStunStack: 3
+  increasingslowAmount: -0.05

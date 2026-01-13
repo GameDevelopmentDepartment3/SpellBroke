@@ -8,9 +8,33 @@ public class AugmentUI : MonoBehaviour
     public List<MagicDamage> magics;
     public List<UpgradeData> allUpgrades;
     public List<AugmentButton> upgradeCards;
+    public string? mainElement;
     public int curLevel = 0;
 
+    private void Update()
+    {
+        if (LevelScore.instance.level != this.curLevel)
+        {
+            switch (mainElement)
+            {
+                case null:
+                    Debug.Log($"{curLevel} {LevelScore.instance.level}");
+                    this.curLevel = LevelScore.instance.level;
+                    Open();
+                    break;
+                case "Fire":
+                    break;
+                case "Ice":
+                    break;
+                case "Electric":
+                    break;
+                default:
+                    Debug.Log("What?!??!");
+                    break;
 
+            }
+        }
+    }
     public void Open()
     {
         List<UpgradeData> curLevelUpgrades = new List<UpgradeData>();
