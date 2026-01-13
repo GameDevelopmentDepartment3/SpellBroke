@@ -16,7 +16,7 @@ public class SummonPoint : MonoBehaviour
         {
             var monster = SummonManager.instance.GetObject(summonMonsterName);
             monster.transform.position = this.transform.position;
-            yield return new WaitForSeconds(summonDelay);
+            yield return new WaitForSeconds(summonDelay * (1 - (LevelScore.instance.level/10)));
         }
     }
 }

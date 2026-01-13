@@ -20,7 +20,11 @@ public class HPBar : MonoBehaviour
     }
     private void Update()
     {
-        maxHP = PlayerStatsManager.instance.maxHP;
+        if (PlayerStatsManager.instance.maxHP != this.maxHP)
+        {
+            Heal(PlayerStatsManager.instance.maxHP - this.maxHP);
+            maxHP = PlayerStatsManager.instance.maxHP;
+        }
     }
     public void TakeDamage(float damage)
     {
@@ -28,6 +32,12 @@ public class HPBar : MonoBehaviour
 
         hitEffect.PlayHitEffect();
         currentHP = Mathf.Clamp(currentHP - damage, 0f, maxHP);
+        UpdateHP();
+    }
+    public void Heal(float healAmount)
+    {
+        if (isDead) return;
+        currentHP = Mathf.Clamp(currentHP + healAmount, 0f, maxHP);
         UpdateHP();
     }
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SecondElectricMagicUpgrade1 1
   m_EditorClassIdentifier: Assembly-CSharp::BasicElectricMagicUpgrade
   upgradeName: "[\uAC15\uD654]\\n\uBC88\uAC1C \uB9C8\uBC95"
-  description: "\uC5F0\uC1C4 \uD69F\uC218\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4"
-  icon: {fileID: 0}
+  description: "\uC5F0\uC1C4 \uD69F\uC218\uAC00 \uD06C\uAC8C \uC99D\uAC00\uD569\uB2C8\uB2E4"
+  icon: {fileID: 21300000, guid: a29c87284a8bad1439708d9249c3666a, type: 3}
   levelRequirement: 3
   typeOfUpgrade: 3
   increasingChainRadius: 0

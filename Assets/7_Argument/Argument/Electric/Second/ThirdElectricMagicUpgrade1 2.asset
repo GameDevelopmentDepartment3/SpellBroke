@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78958f09c4024be4c801b75a6b7fea91, type: 3}
   m_Name: ThirdElectricMagicUpgrade1 2
   m_EditorClassIdentifier: Assembly-CSharp::BasicElectricMagicUpgrade
-  upgradeName: 
-  description: 
-  icon: {fileID: 0}
-  levelRequirement: 0
+  upgradeName: "[\uAC15\uD654]\\n\uBC88\uAC1C \uB9C8\uBC95"
+  description: "\uC5F0\uC1C4 \uC0AC\uAC70\uB9AC\uAC00 \uD06C\uAC8C \uC99D\uAC00\uD569\uB2C8\uB2E4"
+  icon: {fileID: 21300000, guid: a29c87284a8bad1439708d9249c3666a, type: 3}
+  levelRequirement: 3
   typeOfUpgrade: 3
-  increasingChainRadius: 10
-  increasingMaxChainCounts: 1
+  increasingChainRadius: 30
+  increasingMaxChainCounts: 0
