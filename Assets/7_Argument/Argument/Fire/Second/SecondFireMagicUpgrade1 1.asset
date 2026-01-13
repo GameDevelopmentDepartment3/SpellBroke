@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d131679199cdcec4bbfd057d4201413b, type: 3}
-  m_Name: BasicFireMagicUpgrade
+  m_Name: SecondFireMagicUpgrade1 1
   m_EditorClassIdentifier: Assembly-CSharp::BasicFireMagicUpgrade
-  upgradeName: "[\uC804\uC9C1]\\n\uD654\uC5FC\uC220\uC0AC"
-  description: "\uD654\uC5FC\uC220\uC0AC\uB85C \uC804\uC9C1\uD569\uB2C8\uB2E4"
+  upgradeName: "[\uAC15\uD654]\\n\uD654\uC5FC \uB9C8\uBC95"
+  description: "\uCD5C\uB300 \uD654\uC5FC \uC2A4\uD0DD \uC218 \uD06C\uAC8C \uC99D\uAC00"
   icon: {fileID: 21300000, guid: ee0a41499eec88548b1d09a724c95ced, type: 3}
-  levelRequirement: 1
+  levelRequirement: 3
   typeOfUpgrade: 1
-  increasingmaxBurnStack: 1
-  increasingBurnDamage: 2
+  increasingmaxBurnStack: 2
+  increasingBurnDamage: 0

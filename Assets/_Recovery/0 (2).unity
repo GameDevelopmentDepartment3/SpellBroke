@@ -2778,7 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelScore
   augmentUI: {fileID: 1996905649}
-  level: 0
+  level: 1
   currentXp: 0
   maxXp: 100
   xpBar: {fileID: 1005197517}
@@ -6143,7 +6143,7 @@ MonoBehaviour:
   maxHP: 100
   attack: 20
   moveSpeed: 35
-  level: 0
+  level: 1
 --- !u!1 &1378625269
 GameObject:
   m_ObjectHideFlags: 0

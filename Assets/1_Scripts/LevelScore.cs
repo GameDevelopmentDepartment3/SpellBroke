@@ -6,9 +6,9 @@ public class LevelScore : MonoBehaviour
     [SerializeField] private AugmentUI augmentUI;
     public static LevelScore instance;
     
-    public int level = 1;
+    public int level = 0;
     public float currentXp = 0f;
-    public float maxXp = 100f;
+    public float maxXp = 50f;
 
     [SerializeField] private XPBar xpBar;
 
@@ -22,6 +22,7 @@ public class LevelScore : MonoBehaviour
 
     void Start()
     {
+        LevelUp();
         xpBar.UpdateUI(currentXp, maxXp, level);
     }
     private void Update()
@@ -47,8 +48,11 @@ public class LevelScore : MonoBehaviour
     void LevelUp()
     {
         level++;
-        currentXp -= maxXp;
+        PlayerStatsManager.instance.LevelUp();
+        augmentUI.curLevel = level;
+        currentXp -= 0;
         maxXp = maxXp * 3f / 2f;
+        xpBar.UpdateUI(currentXp, maxXp, level);
 
         Debug.Log($"레벨업! Lv.{level}");
         augmentUI.Open();
