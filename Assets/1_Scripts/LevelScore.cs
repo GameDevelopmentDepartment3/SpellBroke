@@ -50,7 +50,7 @@ public class LevelScore : MonoBehaviour
         level++;
         PlayerStatsManager.instance.LevelUp();
         augmentUI.curLevel = level;
-        currentXp -= 0;
+        currentXp = 0;
         maxXp = maxXp * 3f / 2f;
         xpBar.UpdateUI(currentXp, maxXp, level);
 

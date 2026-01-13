@@ -3026,6 +3026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 1
   icon: {fileID: 648903161}
   TitleText: {fileID: 566628275}
   DescriptionText: {fileID: 156546362}
@@ -5905,6 +5906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 2
   icon: {fileID: 1976663461}
   TitleText: {fileID: 983744134}
   DescriptionText: {fileID: 1478890067}
@@ -8561,6 +8563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4cd7c4da25d42ec9130211ac75fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AugmentButton
+  type: 0
   icon: {fileID: 1762727983}
   TitleText: {fileID: 801253491}
   DescriptionText: {fileID: 886387239}
