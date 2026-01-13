@@ -25,7 +25,7 @@ public class DeathUI : MonoBehaviour
             Keyboard.current.rKey.wasPressedThisFrame)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 }
