@@ -29572,6 +29572,7 @@ GameObject:
   - component: {fileID: 6096757213908423747}
   - component: {fileID: 720325515038598322}
   - component: {fileID: 668786554398026484}
+  - component: {fileID: -7913610603804858566}
   m_Layer: 0
   m_Name: Plexus AoE
   m_TagString: Untagged
@@ -34461,3 +34462,21 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &-7913610603804858566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974203713140315807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
+  damage: 40
+  attackType: ImmediateMagic
+  attackElement1: Electric
+  attackElement2: Electric
+  burn: {fileID: 0}
+  ice: {fileID: 0}

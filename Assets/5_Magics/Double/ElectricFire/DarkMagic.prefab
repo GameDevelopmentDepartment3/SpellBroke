@@ -9759,6 +9759,7 @@ GameObject:
   - component: {fileID: 5862613817031353211}
   - component: {fileID: 6469354921825657977}
   - component: {fileID: 5744350271466584198}
+  - component: {fileID: -5353709187138688728}
   m_Layer: 0
   m_Name: DarkMagic
   m_TagString: Untagged
@@ -14595,3 +14596,21 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!114 &-5353709187138688728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131401307255788800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a71f59c99c39c64aac525d3457fc892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MagicDamage
+  damage: 10
+  attackType: OverTimeMagic
+  attackElement1: Electric
+  attackElement2: Fire
+  burn: {fileID: 7905298493108305087, guid: 686b44e8a7aa67a42abee39f38f28649, type: 3}
+  ice: {fileID: 0}
