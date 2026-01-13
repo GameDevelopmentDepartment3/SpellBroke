@@ -8070,8 +8070,8 @@ MonoBehaviour:
   augmentPanel: {fileID: 1996905645}
   magics:
   - {fileID: -4026772950504505629, guid: 1012fc265dafe479892529a4cb702e68, type: 3}
-  - {fileID: -286071528852318993, guid: b32892678ce3f4662a613764c50b96ea, type: 3}
   - {fileID: 5755953746657081020, guid: 7f57e8d10311547749767881a5a56842, type: 3}
+  - {fileID: -286071528852318993, guid: b32892678ce3f4662a613764c50b96ea, type: 3}
   allUpgrades:
   - {fileID: 11400000, guid: 05aabc5c1b4590c49857cdaf474b13fd, type: 2}
   - {fileID: 11400000, guid: 4bb653bcf184d8641bfbc8534e2c4744, type: 2}
