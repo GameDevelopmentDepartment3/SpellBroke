@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class AugmentUI : MonoBehaviour
 {
@@ -58,10 +59,11 @@ public class AugmentUI : MonoBehaviour
             Debug.LogError("그 레벨의 증강의 개수가 부족합니다.");
             return;
         }
+        var result = Enumerable.Range(0, curLevelUpgrades.Count).OrderBy(x => Random.value).Take(3).ToList();
         for (int i = 0; i < upgradeCards.Count; i++)
         {
             //int randomIndex = Random.Range(0, curLevelUpgrades.Count);
-            UpgradeData selected = curLevelUpgrades[i];
+            UpgradeData selected = curLevelUpgrades[result[i]];
             foreach(MagicDamage magic in magics)
             {
                 string fir = magic.attackElement1;

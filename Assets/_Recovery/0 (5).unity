@@ -8229,11 +8229,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0db4558ea7595c345acfce78118e0d7b, type: 2}
   - {fileID: 11400000, guid: a570577da0166f04da23972b41f74905, type: 2}
   - {fileID: 11400000, guid: c811a9f48134b1e4a9c1d788864a12ae, type: 2}
-  - {fileID: 11400000, guid: 7d04f600c20bdf04687ad874f19d14c4, type: 2}
-  - {fileID: 11400000, guid: 34af49c421e00fe40b1601937441793f, type: 2}
-  - {fileID: 11400000, guid: c4893f509d75bfe45bd65426d97d13b8, type: 2}
-  - {fileID: 11400000, guid: abd1ccf962c767247ad226599f795b12, type: 2}
-  - {fileID: 11400000, guid: be9202012df0b55488988419eb5e8506, type: 2}
   upgradeCards:
   - {fileID: 2087221626}
   - {fileID: 682359861}
