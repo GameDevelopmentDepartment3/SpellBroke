@@ -54,8 +54,6 @@ public class FireAttack : MonoBehaviour
         var Enemy = this.gameObject.transform.parent.GetComponent<EnemyHealth>();
         for (int i = 0; i < currentBurnStack; i++)
             Enemy.TakeDamage(burnDamagePerSecond);
-        Enemy.childObject.GetComponent<Renderer>().material.color = Color.red;
         yield return new WaitForSeconds(1f);
-        Enemy.childObject.GetComponent<Renderer>().material.color = Color.white;
     }
 }
