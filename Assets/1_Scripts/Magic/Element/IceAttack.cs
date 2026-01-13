@@ -22,6 +22,7 @@ public class IceAttack : MonoBehaviour
     }
     private void OnDisable()
     {
+        Enemy.speed = enemySpeed;
         Destroy(this.gameObject);
     }
     IEnumerator Ice()

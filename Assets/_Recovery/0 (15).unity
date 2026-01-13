@@ -5654,8 +5654,6 @@ MonoBehaviour:
   firstColor: {r: 0.53813636, g: 0.8207547, b: 0.53813636, a: 1}
   secondColor: {r: 0.9622642, g: 0.91303957, b: 0.21333215, a: 1}
   combinedColor: {r: 0.9056604, g: 0.5648682, b: 0.055535804, a: 1}
-  singleCooldownTime: 0.5
-  doubleCooldownTime: 1
 --- !u!4 &1238170929
 Transform:
   m_ObjectHideFlags: 0
