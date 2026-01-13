@@ -406,11 +406,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43058020}
   m_CullTransparentMesh: 1
---- !u!1 &82416537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2589736133003882817, guid: 41b0f95572d6bd749b3df4ee76613e99, type: 3}
-  m_PrefabInstance: {fileID: 1809475649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140026902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1781,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHP: 100
   EnemyName: jabmob
-  childObject: {fileID: 82416537}
+  childObject:
+  - {fileID: 0}
   damagePopupPrefab: {fileID: 888564353169641620, guid: 963e45f736710451b9ea028e7ed44518, type: 3}
 --- !u!1 &574388524
 GameObject:
@@ -3203,6 +3199,8 @@ MonoBehaviour:
   firstColor: {r: 0.53813636, g: 0.8207547, b: 0.53813636, a: 1}
   secondColor: {r: 0.9622642, g: 0.91303957, b: 0.21333215, a: 1}
   combinedColor: {r: 0.9056604, g: 0.5648682, b: 0.055535804, a: 1}
+  singleCooldownTime: 0.5
+  doubleCooldownTime: 1
 --- !u!4 &1244018230
 Transform:
   m_ObjectHideFlags: 0
@@ -3980,7 +3978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1468275093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5254,7 +5252,6 @@ GameObject:
   - component: {fileID: 2104913110}
   - component: {fileID: 2104913113}
   - component: {fileID: 2104913112}
-  - component: {fileID: 2104913111}
   m_Layer: 5
   m_Name: LevelScore
   m_TagString: Untagged
@@ -5281,23 +5278,6 @@ RectTransform:
   m_AnchoredPosition: {x: -49.999855, y: -25.000038}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &2104913111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104913109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3146ccef04fd14767a02a5585a2b11b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelScore
-  augmentUI: {fileID: 0}
-  level: 1
-  currentXp: 0
-  maxXp: 100
-  xpBar: {fileID: 1433719609}
 --- !u!114 &2104913112
 MonoBehaviour:
   m_ObjectHideFlags: 0
