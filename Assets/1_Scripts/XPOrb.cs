@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class XPOrb : MonoBehaviour
 {
     public int xpAmount = 10;
