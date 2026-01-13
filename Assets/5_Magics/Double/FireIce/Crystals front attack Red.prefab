@@ -9784,6 +9784,7 @@ GameObject:
   - component: {fileID: 6013317033843827723}
   - component: {fileID: 1667045297642010080}
   - component: {fileID: 1488997868142810676}
+  - component: {fileID: 4072287716789899192}
   m_Layer: 0
   m_Name: Crystals front attack Red
   m_TagString: Untagged
@@ -14703,6 +14704,29 @@ MonoBehaviour:
   attackElement2: Ice
   burn: {fileID: 7905298493108305087, guid: 686b44e8a7aa67a42abee39f38f28649, type: 3}
   ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
+--- !u!136 &4072287716789899192
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156866507962234106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8.2786455
+  m_Height: 19.88137
+  m_Direction: 0
+  m_Center: {x: 11.662041, y: 0, z: 0}
 --- !u!1 &4423714665294014839
 GameObject:
   m_ObjectHideFlags: 0
@@ -19667,7 +19691,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1e-45, y: 6.512443e+22, z: 1e-45, w: 1.2171109e-37}
+  m_BoundingSphereOverride: {x: 4e-45, y: 2.2159271e-13, z: 4e-45, w: 5.2104647e+17}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0

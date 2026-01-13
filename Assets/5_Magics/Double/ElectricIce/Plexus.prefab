@@ -4859,6 +4859,7 @@ GameObject:
   - component: {fileID: 2400466318854986903}
   - component: {fileID: 2442981283657224913}
   - component: {fileID: 3119269482780360797}
+  - component: {fileID: 7233582401547341257}
   m_Layer: 0
   m_Name: Plexus
   m_TagString: Untagged
@@ -9703,3 +9704,24 @@ MonoBehaviour:
   attackElement2: Ice
   burn: {fileID: 0}
   ice: {fileID: 5492846855955688444, guid: e73307326cb46ea46bab1374d1402b62, type: 3}
+--- !u!135 &7233582401547341257
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063518424537689786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 7.31
+  m_Center: {x: 0, y: 0, z: 0}
