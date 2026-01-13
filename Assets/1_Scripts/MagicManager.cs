@@ -19,6 +19,12 @@ public class MagicManager : MonoBehaviour
     public Color secondColor = new Color(245, 233, 54);
     public Color combinedColor = new Color(231, 144, 14); // 초록+노랑이 겹칠 때 색상 (주황색 예시)
     
+    [Header("Cooldown")]
+    public float singleCooldownTime = 0.5f; // 입력 무시 시간
+    public float doubleCooldownTime = 1f;
+    private float singleLastInputTime = 0f; // 마지막 입력 시점 저장
+    private float doubleLastInputTime = 0f;
+
     private PlayerControls _controls;
     private int firstSelect = 3; // electricity: 1, fire: 3, ice: 7
     private int secondSelect = 3;
@@ -39,7 +45,11 @@ public class MagicManager : MonoBehaviour
             else if (_controls.Player.Fire.triggered) firstSelect = 3;
             else if (_controls.Player.Ice.triggered) firstSelect = 7;
 
-            if (_controls.Player.Casting.triggered) Casting(1);
+            if (_controls.Player.Casting.triggered && Time.time >= singleLastInputTime + singleCooldownTime)
+            {
+                singleLastInputTime = Time.time;
+                Casting(1);
+            } 
         }
         else
         {
@@ -47,7 +57,11 @@ public class MagicManager : MonoBehaviour
             else if (_controls.Player.Fire.triggered) secondSelect = 3;
             else if (_controls.Player.Ice.triggered) secondSelect = 7;
 
-            if (_controls.Player.Casting.triggered) Casting(2);
+            if (_controls.Player.Casting.triggered && Time.time >= doubleLastInputTime + doubleCooldownTime)
+            {
+                doubleLastInputTime = Time.time;
+                Casting(2);
+            }
         }
 
         UpdateUI(); // 입력이 없더라도 매 프레임 UI 상태를 갱신합니다.
