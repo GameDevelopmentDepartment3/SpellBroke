@@ -2,15 +2,31 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+[DefaultExecutionOrder(-100)]
 public class FireAttack : MonoBehaviour
 {
+    [Header("원본 세팅값")]
+    public int baseMaxBurnStack = 5;
+    public int baseCurrentBurnStack = 1;
+    public float baseBurnDamagePerSecond = 5f;
+    public float baseBurnDuration = 3f;
+    public float baseExplosionDamage = 50f;
+    [Header("인게임 세팅값")]
     public int maxBurnStack = 5;
-    public int currentBurnStack = 0;
+    public int currentBurnStack = 1;
     public float burnDamagePerSecond = 5f;
     public float burnDuration = 3f;
     public float explosionDamage = 50f;
     public GameObject fireExplosionPrefab;
     public Image burnRing;
+    private void Awake()
+    {
+        maxBurnStack = baseMaxBurnStack + UpgradeManager.Instance.plusBurnStack;
+        currentBurnStack = baseCurrentBurnStack;
+        burnDamagePerSecond = baseBurnDamagePerSecond + UpgradeManager.Instance.plusBurnDamagePerSecond;
+        burnDuration = baseBurnDuration;
+        explosionDamage = baseExplosionDamage;
+    }
     private void Start()
     {
         StartCoroutine(Burn());

@@ -46,6 +46,8 @@ public class EnemyHealth : MonoBehaviour
     }
     void OnEnable()
     {
+        if(LevelScore.instance.level > 0)
+            maxHP = maxHP * (1 + (0.2f * LevelScore.instance.level));
         // 풀링으로 재활성화될 때마다 리스트를 다시 점검하거나 색상을 초기화
         if (childObject == null || childObject.Count == 0)
         {

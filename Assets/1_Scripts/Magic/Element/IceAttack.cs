@@ -3,16 +3,34 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
 
+[DefaultExecutionOrder(-100)]
 public class IceAttack : MonoBehaviour
 {
-    public int maxIceStack = 3;
-    public int currentIceStack = 0;
+    [Header("원본 세팅값")]
+    public int baseMaxIceStack = 5;
+    public int baseCurrentIceStack = 1;
+    public float baseIceDuration = 3f;
+    public float baseSlowAmount = 0.15f;
+    public float baseStunDuration = 0.5f;
+    [Header("인게임 세팅값")]
+    public int maxIceStack = 5;
+    public int currentIceStack = 1;
     public float iceDuration = 3f;
     public float slowAmount = 0.15f;
     public float stunDuration = 0.5f;
+
     public Image IceRing;
     float enemySpeed;
     NavMeshAgent Enemy;
+
+    private void Awake()
+    {
+        maxIceStack = baseMaxIceStack - UpgradeManager.Instance.minusIceStack;
+        currentIceStack = baseCurrentIceStack;
+        iceDuration = baseIceDuration;
+        slowAmount = baseSlowAmount + UpgradeManager.Instance.plusSlowAmount;
+        stunDuration = baseStunDuration;
+    }
 
     void Start()
     {
