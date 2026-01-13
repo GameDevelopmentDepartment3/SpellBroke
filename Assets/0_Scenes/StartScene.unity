@@ -460,7 +460,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter\uC744 \uC0AC\uC6A9\uD558\uC5EC\uB180\n"
+  m_text: "Enter\uC744 \uB20C\uB7EC \uB180\uC774\uC2DC\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c896bb24cde7427fadaed410ff6c332, type: 2}
   m_sharedMaterial: {fileID: -8425143001488058785, guid: 7c896bb24cde7427fadaed410ff6c332, type: 2}
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.95
+  m_fontSize: 19.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
