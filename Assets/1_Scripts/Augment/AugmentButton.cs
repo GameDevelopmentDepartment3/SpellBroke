@@ -4,13 +4,6 @@ using UnityEngine.UI;
 
 public class AugmentButton : MonoBehaviour
 {
-    public enum AugmentType
-    {
-        HP,
-        Attack,
-        Speed
-    }
-    public AugmentType type;
     private UpgradeData upgradeData;
     public Image icon;
     public TextMeshProUGUI TitleText;
@@ -19,24 +12,6 @@ public class AugmentButton : MonoBehaviour
 
     [SerializeField] private PlayerStatsManager player;
     [SerializeField] private AugmentUI augmentUI;
-    public void SelectAugment()
-    {
-        switch (type)
-        {
-            case AugmentType.HP:
-                PlayerStatsManager.instance.AddHP(20f);
-                break;
-            
-            case AugmentType.Attack:
-                PlayerStatsManager.instance.AddAttack(10f);
-                break;
-
-            case AugmentType.Speed:
-                PlayerStatsManager.instance.AddSpeed(5f);
-                break; 
-        }
-        augmentUI.Close();
-    }
     public void SetUp(UpgradeData newData)
     {
         this.upgradeData = newData;
@@ -46,6 +21,24 @@ public class AugmentButton : MonoBehaviour
     }
     public void OnClick()
     {
+        if (augmentUI.curLevel == 1)
+        {
+            switch (upgradeData.typeOfUpgrade)
+            {
+                case UpgradeData.UpgradeType.Fire:
+                    augmentUI.mainElement = "Fire";
+                    break;
+                case UpgradeData.UpgradeType.Ice:
+                    augmentUI.mainElement = "Ice";
+                    break;
+                case UpgradeData.UpgradeType.Electric:
+                    augmentUI.mainElement = "Electric";
+                    break;
+                default:
+                    Debug.LogError($"{upgradeData.typeOfUpgrade} <----- 이렇게 이상한 값 드감");
+                    break;
+            }
+        }
         upgradeData.ApplyUpgrade(magic);
         augmentUI.Close();
     }

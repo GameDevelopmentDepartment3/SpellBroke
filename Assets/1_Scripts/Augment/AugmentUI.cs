@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class AugmentUI : MonoBehaviour
 {
@@ -15,24 +14,13 @@ public class AugmentUI : MonoBehaviour
     {
         if (LevelScore.instance.level != this.curLevel)
         {
-            switch (mainElement)
+            if(mainElement == null)
             {
-                case null:
-                    Debug.Log($"{curLevel} {LevelScore.instance.level}");
-                    this.curLevel = LevelScore.instance.level;
-                    Open();
-                    break;
-                case "Fire":
-                    break;
-                case "Ice":
-                    break;
-                case "Electric":
-                    break;
-                default:
-                    Debug.Log("What?!??!");
-                    break;
-
+                Debug.Log($"{curLevel} {LevelScore.instance.level}");
+                this.curLevel = LevelScore.instance.level;
+                Open();
             }
+            
         }
     }
     public void Open()
@@ -40,10 +28,32 @@ public class AugmentUI : MonoBehaviour
         List<UpgradeData> curLevelUpgrades = new List<UpgradeData>();
         foreach (UpgradeData upgrade in allUpgrades)
         {
-            if (upgrade.levelRequirement == curLevel)
-                curLevelUpgrades.Add(upgrade);
+            switch (mainElement)
+            {
+                case "":
+                    if (upgrade.levelRequirement == curLevel)
+                        curLevelUpgrades.Add(upgrade);
+                    break;
+                case "Fire":
+                    if (upgrade.levelRequirement == curLevel && upgrade.typeOfUpgrade is UpgradeData.UpgradeType.Fire or UpgradeData.UpgradeType.StatUp)
+                        curLevelUpgrades.Add(upgrade);
+                    break;
+                case "Ice":
+                    Debug.Log("@@");
+                    if (upgrade.levelRequirement == curLevel && upgrade.typeOfUpgrade is UpgradeData.UpgradeType.Ice or UpgradeData.UpgradeType.StatUp)
+                        curLevelUpgrades.Add(upgrade);
+                    break;
+                case "Electric":
+                    if (upgrade.levelRequirement == curLevel && upgrade.typeOfUpgrade is UpgradeData.UpgradeType.Electric or UpgradeData.UpgradeType.StatUp)
+                        curLevelUpgrades.Add(upgrade);
+                    break;
+                default:
+                    Debug.LogError($"Whar?!?!? mainElement Strange {mainElement} ");
+                    break;
+            }
         }
-        if(upgradeCards.Count < curLevelUpgrades.Count)
+        Debug.Log(curLevelUpgrades.Count);
+        if (upgradeCards.Count > curLevelUpgrades.Count)
         {
             Debug.LogError("그 레벨의 증강의 개수가 부족합니다.");
             return;
