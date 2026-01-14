@@ -1310,6 +1310,8 @@ MonoBehaviour:
   plusSlowAmount: 0
   plusBurnStack: 0
   plusBurnDamagePerSecond: 0
+  plusElectricChainRange: 0
+  plusElectricChainCount: 0
 --- !u!1001 &324824515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5861,12 +5863,12 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
   iceSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
   elecSound: {fileID: 8300000, guid: f1cb5d83282f2904a85f73111d068616, type: 3}
-  elcelcSound: {fileID: 0}
-  elcefireSound: {fileID: 0}
-  elceiceSound: {fileID: 0}
-  firefireSound: {fileID: 0}
-  fireiceSound: {fileID: 0}
-  iceiceSound: {fileID: 0}
+  elcelcSound: {fileID: 8300000, guid: f1cb5d83282f2904a85f73111d068616, type: 3}
+  elcefireSound: {fileID: 8300000, guid: f1cb5d83282f2904a85f73111d068616, type: 3}
+  elceiceSound: {fileID: 8300000, guid: 1eb7cbaf61d23a64bbd36c0a38b5cb0c, type: 3}
+  firefireSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  fireiceSound: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  iceiceSound: {fileID: 8300000, guid: 1d74880bed4586644a16a79a2d9dc8af, type: 3}
   myMagics:
   - {fileID: 11400000, guid: 5374f58cc0054436e8508a156bacbb71, type: 2}
   - {fileID: 11400000, guid: e59a60a669d284e5b844d3a57f217f3c, type: 2}
