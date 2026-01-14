@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -111,6 +112,11 @@ public class MagicManager : MonoBehaviour
         return -1;
     }
 
+    IEnumerator PlaySoundDelay(AudioClip clip, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        audioSource.PlayOneShot(clip);
+    }
 
     private void Casting(int type)
     {
@@ -167,7 +173,7 @@ public class MagicManager : MonoBehaviour
             case 6:
                 {
                     myMagics[8].Cast(targets[1].transform.position, Quaternion.identity);
-                    audioSource.PlayOneShot(firefireSound);
+                    StartCoroutine(PlaySoundDelay(firefireSound, 0.5f));
                 } break; // FireFire
             case 10:
                 {
