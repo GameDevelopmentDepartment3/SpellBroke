@@ -19614,7 +19614,6 @@ GameObject:
   - component: {fileID: 7256153229474341123}
   - component: {fileID: 799156618319652249}
   - component: {fileID: 6770520731076597438}
-  - component: {fileID: 3801013759618172789}
   m_Layer: 0
   m_Name: Trails
   m_TagString: Untagged
@@ -24509,27 +24508,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!135 &3801013759618172789
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014496765054662584}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 3.33
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8018772970214966197
 GameObject:
   m_ObjectHideFlags: 0
@@ -29595,6 +29573,8 @@ GameObject:
   - component: {fileID: 720325515038598322}
   - component: {fileID: 668786554398026484}
   - component: {fileID: -7913610603804858566}
+  - component: {fileID: 3091462991655235719}
+  - component: {fileID: 5430750537538068923}
   m_Layer: 0
   m_Name: Plexus AoE
   m_TagString: Untagged
@@ -34502,3 +34482,41 @@ MonoBehaviour:
   attackElement2: Electric
   burn: {fileID: 0}
   ice: {fileID: 0}
+--- !u!135 &3091462991655235719
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974203713140315807}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5430750537538068923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974203713140315807}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef9a65894d8cb84eb63e03a9ac03771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElectricAttack
+  chainRadius: 15
+  maxChainCounts: 4
+  currentCounts: 0
+  hitEnemies: []
+  electricEffectPrefab: {fileID: 2965222256817593503, guid: 7f57e8d10311547749767881a5a56842, type: 3}

@@ -1,14 +1,18 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class HPBar : MonoBehaviour
-{
+{ 
+    [SerializeField] private TextMeshProUGUI damageText;
+    
     private float beforeMaxHp = 100f;
     [SerializeField] private Image fillImage;
     [SerializeField] public float maxHP = 100f;
     [SerializeField] private DeathUI deathUI;
     [SerializeField] private HitEffect hitEffect;
+    [SerializeField] private TextMeshProUGUI HealthText;
 
     private float currentHP;
     private bool isDead = false;
@@ -48,6 +52,8 @@ public class HPBar : MonoBehaviour
 
         fillImage.fillAmount = ratio;
 
+        HealthText.text = $"{Mathf.CeilToInt(currentHP)} / {Mathf.CeilToInt(maxHP)}";
+        
         if (currentHP <= 0 && !isDead)
         {
             isDead = true;
