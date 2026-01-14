@@ -137,10 +137,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a2cd5d563bdfd4f979ddfb9c044aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceAttack
-  maxIceStack: 5
+  baseMaxIceStack: 5
+  baseCurrentIceStack: 1
+  baseIceDuration: 3
+  baseSlowAmount: 0.15
+  baseStunDuration: 0.5
+  maxIceStack: 3
   currentIceStack: 1
   iceDuration: 3
-  slowAmount: 0.15
+  slowAmount: 0.35
   stunDuration: 0.5
   IceRing: {fileID: 2208290161446989676}
 --- !u!1 &7036333401879612693
