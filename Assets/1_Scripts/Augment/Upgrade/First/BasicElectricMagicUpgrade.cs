@@ -7,11 +7,13 @@ public class BasicElectricMagicUpgrade : UpgradeData
     public int increasingMaxChainCounts = 1;
     public override void ApplyUpgrade(GameObject magic)
     {
-        var electricAttack = magic.GetComponent<ElectricAttack>();
-        if (electricAttack != null)
-        {
-            electricAttack.chainRadius += increasingChainRadius;
-            electricAttack.maxChainCounts += increasingMaxChainCounts;
-        }
+        //var electricAttack = magic.GetComponent<ElectricAttack>();
+        //if (electricAttack != null)
+        //{
+        //    electricAttack.chainRadius += increasingChainRadius;
+        //    electricAttack.maxChainCounts += increasingMaxChainCounts;
+        //}
+        UpgradeManager.Instance.plusElectricChainCount += increasingMaxChainCounts;
+        UpgradeManager.Instance.plusElectricChainRange += increasingChainRadius;
     }
 }

@@ -4,11 +4,22 @@ using System.Collections;
 
 public class ElectricAttack : MonoBehaviour
 {
+    [Header("원본 세팅값")]
+    public float baseChainRadius = 15f;
+    public int baseMaxChainCounts = 4;
+    public int baseCurrentCounts = 0;
+    [Header("인게임 세팅값")]
     public float chainRadius = 15f;
     public int maxChainCounts = 4;
     public int currentCounts = 0;
     public List<Transform> hitEnemies = new List<Transform>();
     public GameObject electricEffectPrefab;
+    private void Awake()
+    {
+        chainRadius = baseChainRadius + UpgradeManager.Instance.plusElectricChainRange;
+        maxChainCounts = baseMaxChainCounts + UpgradeManager.Instance.plusElectricChainCount;
+        currentCounts = baseCurrentCounts;
+    }
     void Start()
     {
         if (currentCounts < maxChainCounts)
