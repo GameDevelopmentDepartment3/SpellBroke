@@ -77,13 +77,6 @@ public class EnemyHealth : MonoBehaviour
     {
         Hp = maxHP;
     }
-    private void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
-        {
-            TakeDamage(10f);
-        }
-    }
     public void TakeDamage(float damage)
     {
         // 대미지 텍스트 생성 (적의 위치보다 조금 위쪽)
