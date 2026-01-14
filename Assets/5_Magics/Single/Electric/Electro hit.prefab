@@ -9877,7 +9877,7 @@ MonoBehaviour:
   attackElement1: Electric
   attackElement2: Electric
   burn: {fileID: 0}
-  Ice: {fileID: 0}
+  ice: {fileID: 0}
 --- !u!135 &4011405699773901068
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9911,7 +9911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef9a65894d8cb84eb63e03a9ac03771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ElectricAttack
-  chainRadius: 20
+  baseChainRadius: 15
+  baseMaxChainCounts: 4
+  baseCurrentCounts: 0
+  chainRadius: 15
   maxChainCounts: 4
   currentCounts: 0
   hitEnemies: []
