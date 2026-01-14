@@ -9,6 +9,8 @@ public class UpgradeManager : MonoBehaviour
     public float plusSlowAmount = 0;
     public int plusBurnStack = 0;
     public float plusBurnDamagePerSecond = 0;
+    public float plusElectricChainRange = 0;
+    public int plusElectricChainCount = 0;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class UpgradeManager : MonoBehaviour
         plusSlowAmount = 0;
         plusBurnStack = 0;
         plusBurnDamagePerSecond = 0;
-
+        plusElectricChainCount = 0;
+        plusElectricChainRange = 0;
     }
 }
