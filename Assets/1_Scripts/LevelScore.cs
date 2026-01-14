@@ -9,6 +9,7 @@ public class LevelScore : MonoBehaviour
     public int level = 0;
     public float currentXp = 0f;
     public float maxXp = 50f;
+    public GameObject Boss;
 
     [SerializeField] private XPBar xpBar;
 
@@ -27,9 +28,9 @@ public class LevelScore : MonoBehaviour
     }
     private void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        if(level >= 5)
         {
-            LevelUp();
+            Boss.SetActive(true);
         }
     }
 
