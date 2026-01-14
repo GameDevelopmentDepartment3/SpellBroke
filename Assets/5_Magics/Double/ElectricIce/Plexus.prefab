@@ -4860,6 +4860,7 @@ GameObject:
   - component: {fileID: 2442981283657224913}
   - component: {fileID: 3119269482780360797}
   - component: {fileID: 7233582401547341257}
+  - component: {fileID: 945759113108932228}
   m_Layer: 0
   m_Name: Plexus
   m_TagString: Untagged
@@ -9719,9 +9720,26 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 7.31
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &945759113108932228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063518424537689786}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef9a65894d8cb84eb63e03a9ac03771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElectricAttack
+  chainRadius: 15
+  maxChainCounts: 4
+  currentCounts: 0
+  hitEnemies: []
+  electricEffectPrefab: {fileID: 2965222256817593503, guid: 7f57e8d10311547749767881a5a56842, type: 3}
