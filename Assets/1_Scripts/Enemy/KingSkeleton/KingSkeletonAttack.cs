@@ -14,6 +14,9 @@ public class KingSkeletonAttack : MonoBehaviour
     public NavMeshAgent agent;
     private Transform playerTransform;
 
+    public LaunchAttack launchAttack;
+    public SummonSkulll summonSkulll;
+
     [SerializeField]
     private FSMStates currentState;
 
@@ -38,23 +41,24 @@ public class KingSkeletonAttack : MonoBehaviour
     {
         if (playerTransform == null) return;
 
-        // 현재 공격/소환 중이라면 거리 체크나 상태 변경을 하지 않고 리턴!
-        if (isPerformingAction) return;
-
         if (isPerformingAction)
         {
-            agent.isStopped = true;     // 정지 상태 유지
-            agent.speed = 0; // 물리적인 관성 속도까지 0으로 제거
+            //agent.isStopped = true;     // 정지 상태 유지
+            chaseSpeed = 0.1f; // 물리적인 관성 속도까지 0으로 제거
             agent.velocity = Vector3.zero;
             return;
         }
         else
         {
-            agent.isStopped = false;    // 추격 상태로 전환
+            //agent.isStopped = false;    // 추격 상태로 전환
+            chaseSpeed = 15f;
             agent.speed = chaseSpeed;   // 추격 속도 복원
         }
+        // 현재 공격/소환 중이라면 거리 체크나 상태 변경을 하지 않고 리턴!
+        if (isPerformingAction) return;
 
-            var distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        var distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
         if (distanceToPlayer > attackRange)
         {
@@ -65,7 +69,7 @@ public class KingSkeletonAttack : MonoBehaviour
         {
             // 거리 안에 들어왔을 때 딱 한 번만 결정
             int value = Random.Range(0, 10);
-            if (value < 7)
+            if (value < 8)
                 ExecuteAttack();
             else
                 ExecuteSummon();
@@ -102,6 +106,15 @@ public class KingSkeletonAttack : MonoBehaviour
         isPerformingAction = false;
         agent.isStopped = false; // 여기서 다시 이동 허용
         // 다시 추격 상태로 초기화
+        animator.SetBool("isChasing", true);
         currentState = FSMStates.Chase;
+    }
+    public void LaunchProjectile()
+    {
+        launchAttack.Launch();
+    }
+    public void SummonSkull()
+    {
+        StartCoroutine(summonSkulll.Summon());
     }
 }

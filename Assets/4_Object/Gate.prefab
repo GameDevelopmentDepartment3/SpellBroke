@@ -14602,7 +14602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c66622538bb4b24d98336efb310192b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummonPoint
-  summonDelay: 1
+  summonDelay: 3
   summonMonsterName: Skeleton
 --- !u!114 &3583254226205807677
 MonoBehaviour:
