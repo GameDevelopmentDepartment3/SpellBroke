@@ -3174,7 +3174,6 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 7ca4be7200081c54b9010740a2029fe8, type: 3}
     - {fileID: 65702495048144492, guid: 7ca4be7200081c54b9010740a2029fe8, type: 3}
-    - {fileID: 2071963930070466410, guid: 7ca4be7200081c54b9010740a2029fe8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ca4be7200081c54b9010740a2029fe8, type: 3}
@@ -3267,55 +3266,102 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8522357657677868555, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
-      propertyPath: m_Name
-      value: KingSkeleton
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 574.1
+      value: 544.13
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.000012173361
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 494.7
+      value: 520.35
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9011332930848978097, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_Name
+      value: KingSkeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f71491d8a7b59ca46b3048b8250a7252, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728225375}
+  m_SourcePrefab: {fileID: 100100000, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+--- !u!1 &728225373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+  m_PrefabInstance: {fileID: 728225372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &728225374 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: cb33a48699d642c99396b004ffbfbd1c, type: 3}
+  m_PrefabInstance: {fileID: 728225372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &728225375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728225373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf982b03332b954cacbbb0c51917929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KingSkeletonAttack
+  player: {x: 0, y: 0, z: 0}
+  animator: {fileID: 728225374}
 --- !u!1 &737375592
 GameObject:
   m_ObjectHideFlags: 0
@@ -5467,10 +5513,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d000072c3bf3ff142ad23b979dd1eaf8, type: 2}
-    - target: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
