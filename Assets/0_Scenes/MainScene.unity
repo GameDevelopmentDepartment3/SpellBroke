@@ -3270,6 +3270,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2923678314706852827, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
+      propertyPath: maxHP
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 8522357657677868555, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
       propertyPath: m_Name
       value: KingSkeleton
