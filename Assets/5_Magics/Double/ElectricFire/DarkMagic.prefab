@@ -9761,6 +9761,7 @@ GameObject:
   - component: {fileID: 5744350271466584198}
   - component: {fileID: -5353709187138688728}
   - component: {fileID: 4175873101686782378}
+  - component: {fileID: -5047079194543102138}
   m_Layer: 0
   m_Name: DarkMagic
   m_TagString: Untagged
@@ -14630,9 +14631,26 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 2.66
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-5047079194543102138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131401307255788800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef9a65894d8cb84eb63e03a9ac03771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElectricAttack
+  chainRadius: 15
+  maxChainCounts: 4
+  currentCounts: 0
+  hitEnemies: []
+  electricEffectPrefab: {fileID: 2965222256817593503, guid: 7f57e8d10311547749767881a5a56842, type: 3}
