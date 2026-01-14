@@ -5,6 +5,18 @@ using System.Net;
 
 public class MagicManager : MonoBehaviour
 {
+    [Header("Sound")]
+    public AudioSource audioSource;
+    public AudioClip fireSound;
+    public AudioClip iceSound;
+    public AudioClip elecSound;
+    public AudioClip elcelcSound;
+    public AudioClip elcefireSound;
+    public AudioClip elceiceSound;
+    public AudioClip firefireSound;
+    public AudioClip fireiceSound;
+    public AudioClip iceiceSound;
+
     [Header("Magics")]
     // 인스펙터에서 MagicData(SimpleMagicSO 또는 CompositeMagicSO)를 드래그 앤 드롭 가능
     public List<MagicData> myMagics;
@@ -28,6 +40,8 @@ public class MagicManager : MonoBehaviour
     private PlayerControls _controls;
     private int firstSelect = 3; // electricity: 1, fire: 3, ice: 7
     private int secondSelect = 3;
+    
+    
 
     void Awake()
     {
@@ -113,47 +127,57 @@ public class MagicManager : MonoBehaviour
             case 1:
                 {
                     myMagics[0].Cast(targets[0].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(elecSound);
                 } break; // Elec
             case 3:
                 {
                     if (target == Vector3.zero)
                     {
                         myMagics[1].Cast(targets[0].transform.position, Quaternion.identity);
+                        audioSource.PlayOneShot(fireSound);
                     }
                     else
                     {
                         myMagics[1].Cast(target, Quaternion.identity);
+                        audioSource.PlayOneShot(fireSound);
                     }
                 } break; // Fire
             case 7:
                 {
                     myMagics[2].Cast(targets[0].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(iceSound);
                 } break; // Ice
             case 2:
                 {
                     myMagics[3].Cast(targets[1].transform.position, Quaternion.identity);
                     myMagics[4].Cast(targets[1].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(elcelcSound);
                 } break; // ElecElec
             case 4:
                 {
                     myMagics[5].Cast(targets[0].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(elcefireSound);
                 } break; // ElecFire
             case 8:
                 {
                     myMagics[6].Cast(targets[0].transform.position, Quaternion.identity);
                     myMagics[7].Cast(targets[0].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(elceiceSound);
                 } break; // ElecIce
             case 6:
                 {
                     myMagics[8].Cast(targets[1].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(firefireSound);
                 } break; // FireFire
             case 10:
                 {
                     myMagics[9].Cast(targets[2].transform.position, targets[2].transform.rotation);
+                    audioSource.PlayOneShot(fireiceSound);
                 } break; // FireIce
             case 14:
                 {
                     myMagics[10].Cast(targets[2].transform.position, Quaternion.identity);
+                    audioSource.PlayOneShot(iceiceSound);
                 } break; // IceIce
         }
     }
