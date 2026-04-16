@@ -3503,17 +3503,6 @@ MonoBehaviour:
   firePoint: {fileID: 1489088356}
   player: {fileID: 2141798295}
   speed: 100
---- !u!114 &728225376 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2923678314706852827, guid: 60df0d85a54c35a4989258ecd7bafab3, type: 3}
-  m_PrefabInstance: {fileID: 728225372}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728225374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88150c9ff8c952438bf2a49ef0e0dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
 --- !u!1 &737375592
 GameObject:
   m_ObjectHideFlags: 0
@@ -9564,8 +9553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathUI
   deathPanel: {fileID: 141345512}
-  WinPanel: {fileID: 17022710}
-  bossHp: {fileID: 728225376}
 --- !u!4 &2106316788
 Transform:
   m_ObjectHideFlags: 0

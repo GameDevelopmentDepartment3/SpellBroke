@@ -32,6 +32,10 @@ public class LevelScore : MonoBehaviour
         {
             Boss.SetActive(true);
         }
+        if (Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            LevelUp();
+        }
     }
 
     public void AddXp(float amount)
